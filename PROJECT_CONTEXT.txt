@@ -212,6 +212,54 @@ Build feature-by-feature:
 
 Avoid building all backend first or all frontend first. Each module should be completed end-to-end before moving to the next.
 
+Next.js App Router Rules
+------------------------
+
+Metadata exports must only exist in Server Components.
+
+Never use:
+
+"use client";
+export const metadata = ...
+
+This causes Next.js build failures.
+
+If a page requires:
+- useState
+- useEffect
+- useReducer
+- useRef
+- useRouter
+- usePathname
+- useSearchParams
+- Redux hooks
+
+Then use the split-page pattern:
+
+Example:
+
+projects/
+├── page.tsx
+└── ProjectsPageClient.tsx
+
+page.tsx:
+- Server Component
+- Owns metadata exports
+- Imports and renders the client component
+
+ProjectsPageClient.tsx:
+- Contains "use client"
+- Contains React hooks and browser-only logic
+
+For public pages, prefer Server Components whenever possible.
+Use client components only when browser interactivity is required.
+
+Goals:
+- Better SEO
+- Better performance
+- Better metadata support
+- Smaller JS bundles
+- Better mobile experience
 
 Current Repository Layout
 -------------------------
@@ -248,6 +296,35 @@ Backend files:
 - backend/src/routes/admin.routes.js
 - backend/src/routes/audit.routes.js
 - backend/scripts/seed-super-admin.js
+ ../backend/fallback/
+        ../backend/src/controllers/attraction.controller.js
+        ../backend/src/controllers/contact.controller.js
+        ../backend/src/controllers/event.controller.js
+        ../backend/src/controllers/impact.controller.js
+        ../backend/src/controllers/media.controller.js
+        ../backend/src/controllers/news.controller.js
+        ../backend/src/controllers/project.controller.js
+        ../backend/src/controllers/search.controller.js
+        ../backend/src/controllers/team.controller.js
+        ../backend/src/middleware/upload.middleware.js
+        ../backend/src/models/Attraction.js
+        ../backend/src/models/ContactSubmission.js
+        ../backend/src/models/Event.js
+        ../backend/src/models/ImpactMetric.js
+        ../backend/src/models/Media.js
+        ../backend/src/models/News.js
+        ../backend/src/models/Project.js
+        ../backend/src/models/TeamMember.js
+        ../backend/src/routes/attraction.routes.js
+        ../backend/src/routes/contact.routes.js
+        ../backend/src/routes/event.routes.js
+        ../backend/src/routes/impact.routes.js
+        ../backend/src/routes/media.routes.js
+        ../backend/src/routes/news.routes.js
+        ../backend/src/routes/project.routes.js
+        ../backend/src/routes/search.routes.js
+        ../backend/src/routes/team.routes.js
+        ../backend/src/services/cloudinary.service.js
 
 Backend APIs:
 - GET /api/health
@@ -275,6 +352,49 @@ Frontend files:
 - frontend/src/app/(admin-panel)/admin/dashboard/page.tsx
 - frontend/src/app/(admin-panel)/admin/admins/page.tsx
 - frontend/src/app/(admin-panel)/admin/audit-logs/page.tsx
+src/app/(admin-panel)/admin/attractions/
+        src/app/(admin-panel)/admin/contact-submissions/
+        src/app/(admin-panel)/admin/events/
+        src/app/(admin-panel)/admin/impact/
+        src/app/(admin-panel)/admin/media/
+        src/app/(admin-panel)/admin/news/
+        src/app/(admin-panel)/admin/projects/
+        src/app/(admin-panel)/admin/team/
+        src/app/attractions/
+        src/app/contact/
+        src/app/events/
+        src/app/impact/
+        src/app/news/
+        src/app/projects/
+        src/app/providers.tsx
+        src/app/search/
+        src/app/team/
+        src/components/ContactForm.tsx
+        src/components/PublicFooter.tsx
+        src/components/PublicHeader.tsx
+        src/components/PublicShell.tsx
+        src/components/SearchBar.tsx
+        src/components/SearchPageClient.tsx
+        src/components/SeoMeta.tsx
+        src/components/admin/AttractionForm.tsx
+        src/components/admin/EventForm.tsx
+        src/components/admin/ImpactMetricForm.tsx
+        src/components/admin/MediaGrid.tsx
+        src/components/admin/MediaPicker.tsx
+        src/components/admin/MediaUploader.tsx
+        src/components/admin/NewsForm.tsx
+        src/components/admin/ProjectForm.tsx
+        src/components/admin/TeamMemberForm.tsx
+        src/types/attraction.ts
+        src/types/contact.ts
+        src/types/event.ts
+        src/types/impact.ts
+        src/types/media.ts
+        src/types/news.ts
+        src/types/project.ts
+        src/types/search.ts
+        src/types/team.ts
+        tsconfig.tsbuildinfo
 - frontend/src/components/admin/AdminLayout.tsx
 - frontend/src/components/admin/Header.tsx
 - frontend/src/components/admin/ProtectedRoute.tsx

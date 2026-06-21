@@ -1,0 +1,12 @@
+[
+  {
+    "title": { "en": "Forest Lookout Point", "bn": "বনের দৃষ্টিপথ" },
+    "slug": "forest-lookout-point",
+    "summary": { "en": "A scenic viewpoint with a walking trail.", "bn": "একটি সুন্দর দৃশ্যমান পথ যেখানে হাঁটার ট্রেইল রয়েছে।" },
+    "body": { "en": "Visitors can enjoy panoramic views of the forest canopy and river valley.", "bn": "পর্যটকরা বনাঞ্চল এবং নদী উপত্যকার প্রশস্ত দৃশ্য উপভোগ করতে পারেন।" },
+    "isFeatured": true,
+    "isPublished": true,
+    "publishedAt": "2026-06-01T00:00:00.000Z",
+    "meta": {}
+  }
+]

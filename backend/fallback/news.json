@@ -1,0 +1,24 @@
+[
+  {
+    "_id": "news-fallback-1",
+    "title": { "en": "Local Nature Initiative Launches", "bn": "স্থানীয় প্রকৃতি উদ্যোগ চালু হয়েছে" },
+    "slug": "local-nature-initiative-launches",
+    "summary": { "en": "A new conservation campaign is bringing local communities together.", "bn": "একটি নতুন সংরক্ষণ কার্যক্রম স্থানীয় সম্প্রদায়কে একত্রিত করছে।" },
+    "body": { "en": "<p>The initiative will support tree planting, nature education, and wildlife protection.</p>", "bn": "<p>এই উদ্যোগটি গাছ রোপণ, প্রকৃতি শিক্ষা এবং বন্যজীবী সুরক্ষাকে সমর্থন করবে।</p>" },
+    "featuredImage": null,
+    "isFeatured": true,
+    "isPublished": true,
+    "publishedAt": "2025-11-01T08:00:00.000Z"
+  },
+  {
+    "_id": "news-fallback-2",
+    "title": { "en": "Volunteer Program Receives Grant", "bn": "স্বেচ্ছাসেবক প্রোগ্রাম অনুদান পেয়েছে" },
+    "slug": "volunteer-program-receives-grant",
+    "summary": { "en": "Support helps expand awareness and community training.", "bn": "সাহায্য awareness এবং সম্প্রদায় প্রশিক্ষণ বৃদ্ধি করতে সহায়তা করে।" },
+    "body": { "en": "<p>Funding will support awareness campaigns and local engagement.</p>", "bn": "<p>অর্থায়ন awareness ক্যাম্পেইন এবং স্থানীয় সম্পৃক্ততা সমর্থন করবে।</p>" },
+    "featuredImage": null,
+    "isFeatured": false,
+    "isPublished": true,
+    "publishedAt": "2025-10-15T09:00:00.000Z"
+  }
+]

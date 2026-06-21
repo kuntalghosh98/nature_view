@@ -1,0 +1,16 @@
+[
+  {
+    "name": { "en": "Ayesha Rahman", "bn": "আয়েশা রহমান" },
+    "role": { "en": "Community Outreach Lead", "bn": "সম্প্রদায় আউটরিচ লিড" },
+    "bio": { "en": "Leads local engagement and volunteer coordination.", "bn": "স্থানীয় সম্পৃক্ততা এবং স্বেচ্ছাসেবক সমন্বয় পরিচালনা করেন।" },
+    "photo": null,
+    "isPublished": true
+  },
+  {
+    "name": { "en": "Karim Hossain", "bn": "করিম হোসেন" },
+    "role": { "en": "Conservation Advisor", "bn": "সংরক্ষণ উপদেষ্টা" },
+    "bio": { "en": "Advises on ecological restoration and visitor experience.", "bn": "পুষ্টি পুনঃস্থাপন এবং ভিজিটর অভিজ্ঞতা নিয়ে পরামর্শ দেন।" },
+    "photo": null,
+    "isPublished": true
+  }
+]

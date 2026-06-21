@@ -1,0 +1,14 @@
+[
+  {
+    "title": { "en": "Trees planted", "bn": "রোপিত গাছ" },
+    "value": "12,500+",
+    "description": { "en": "Native trees planted across the reserve.", "bn": "সংরক্ষিত অঞ্চলে নেটিভ গাছ রোপণ।" },
+    "isHighlighted": true
+  },
+  {
+    "title": { "en": "Volunteers trained", "bn": "প্রশিক্ষণপ্রাপ্ত স্বেচ্ছাসেবক" },
+    "value": "850+",
+    "description": { "en": "Community members trained in conservation practices.", "bn": "সংরক্ষণ অনুশীলনে সম্প্রদায় সদস্যদের প্রশিক্ষণ।" },
+    "isHighlighted": false
+  }
+]

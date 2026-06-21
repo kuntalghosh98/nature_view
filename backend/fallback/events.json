@@ -1,0 +1,32 @@
+[
+  {
+    "_id": "event-fallback-1",
+    "title": { "en": "Forest Awareness Walk", "bn": "বন সচেতনতা মিছিল" },
+    "slug": "forest-awareness-walk",
+    "summary": { "en": "Join a guided walk to learn about local forest ecosystems.", "bn": "স্থানীয় বনগুলি সম্পর্কে জানতে গাইডেড ওয়াকে যোগ দিন।" },
+    "body": { "en": "<p>An educational walk with local guides and conservation experts.</p>", "bn": "<p>স্থানীয় গাইড এবং সংরক্ষণ বিশেষজ্ঞদের সাথে একটি শিক্ষামূলক ওয়াক।</p>" },
+    "location": "Riverside Nature Park",
+    "startDate": "2025-12-05T09:00:00.000Z",
+    "endDate": "2025-12-05T12:00:00.000Z",
+    "registrationUrl": "https://example.com/register/forest-walk",
+    "featuredImage": null,
+    "isFeatured": true,
+    "isPublished": true,
+    "publishedAt": "2025-11-20T09:00:00.000Z"
+  },
+  {
+    "_id": "event-fallback-2",
+    "title": { "en": "Community Plantation Drive", "bn": "সম্প্রদায় রোপণ অভিযান" },
+    "slug": "community-plantation-drive",
+    "summary": { "en": "Help plant native trees and support local biodiversity.", "bn": "স্থানীয় গাছ রোপণ করতে এবং স্থানীয় জীববৈচিত্র্যকে সমর্থন করতে সহায়তা করুন।" },
+    "body": { "en": "<p>Volunteers will receive tools and training for tree planting.</p>", "bn": "<p>স্বেচ্ছাসেবকরা গাছ রোপণের জন্য সরঞ্জাম এবং প্রশিক্ষণ পাবে।</p>" },
+    "location": "Green Valley Field",
+    "startDate": "2025-12-20T10:00:00.000Z",
+    "endDate": "2025-12-20T14:00:00.000Z",
+    "registrationUrl": "https://example.com/register/plantation-drive",
+    "featuredImage": null,
+    "isFeatured": false,
+    "isPublished": true,
+    "publishedAt": "2025-11-30T10:00:00.000Z"
+  }
+]
