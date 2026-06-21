@@ -2,11 +2,20 @@
 
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { Activity, Gauge, LogOut, ShieldCheck, Users } from "lucide-react";
+import { Activity, Briefcase, Gauge, LogOut, Mail, ShieldCheck, Users, MapPin } from "lucide-react";
 import { logoutAdmin } from "@/store/slices/authSlice";
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
 
-const baseItems = [{ href: "/admin/dashboard", label: "Dashboard", icon: Gauge }];
+const baseItems = [
+  { href: "/admin/dashboard", label: "Dashboard", icon: Gauge },
+  { href: "/admin/projects", label: "Projects", icon: Briefcase },
+  { href: "/admin/attractions", label: "Attractions", icon: MapPin },
+  { href: "/admin/news", label: "News", icon: Activity },
+  { href: "/admin/events", label: "Events", icon: MapPin },
+  { href: "/admin/impact", label: "Impact", icon: Activity },
+  { href: "/admin/team", label: "Team", icon: Users },
+  { href: "/admin/contact-submissions", label: "Contact Submissions", icon: Mail }
+];
 const superAdminItems = [
   { href: "/admin/admins", label: "Admins", icon: Users },
   { href: "/admin/audit-logs", label: "Audit Logs", icon: Activity }

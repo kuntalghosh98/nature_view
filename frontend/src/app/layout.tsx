@@ -1,10 +1,25 @@
+
+
 import type { Metadata } from "next";
 import "./globals.css";
 import { StoreProvider } from "@/store/StoreProvider";
+import { PublicShell } from "@/components/PublicShell";
 
 export const metadata: Metadata = {
-  title: "Nature View Admin",
-  description: "Admin panel for Nature View environmental project"
+  title: "Nature View",
+  description: "Nature View conservation tourism and environmental impact site"
+  ,
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
+  openGraph: {
+    title: "Nature View",
+    description: "Nature View conservation tourism and environmental impact site",
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Nature View",
+    description: "Nature View conservation tourism and environmental impact site"
+  }
 };
 
 export default function RootLayout({
@@ -15,7 +30,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <StoreProvider>{children}</StoreProvider>
+        <StoreProvider>
+          <PublicShell>{children}</PublicShell>
+        </StoreProvider>
       </body>
     </html>
   );
