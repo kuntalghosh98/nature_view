@@ -5,11 +5,14 @@ import { apiRequest } from "@/lib/api";
 import type { Attraction } from "@/types/attraction";
 import { useAppSelector } from "@/store/hooks";
 import { AttractionForm } from "@/components/admin/AttractionForm";
+import { getLocalizedText } from "@/lib/getLocalizedText";
+import { useLocale } from "@/providers/LocaleProvider";
 
 export default function AdminAttractionsPage() {
   const { token } = useAppSelector((state) => state.auth);
   const [items, setItems] = useState<Attraction[]>([]);
   const [loading, setLoading] = useState(true);
+  const { locale } = useLocale();
   const [editing, setEditing] = useState<Attraction | null>(null);
 
   async function load() {
@@ -65,8 +68,8 @@ export default function AdminAttractionsPage() {
               <div key={item._id} className="rounded-lg border bg-white p-4 shadow-sm">
                 <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                   <div>
-                    <div className="font-medium">{item.title?.en || item.slug}</div>
-                    <div className="text-xs text-forest-900/60">{item.summary?.en}</div>
+                    <div className="font-medium">{getLocalizedText(item.title, locale) || item.slug}</div>
+                    <div className="text-xs text-forest-900/60">{getLocalizedText(item.summary, locale)}</div>
                     <div className="mt-1 text-xs text-forest-900/70">{item.isFeatured ? "Featured" : "Standard"} • {item.isPublished ? "Published" : "Draft"}</div>
                   </div>
                   <div className="flex flex-wrap gap-2">

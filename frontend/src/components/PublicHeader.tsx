@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, MapPin, Newspaper, Sparkles, Users, Mail, Folder, Trees } from "lucide-react";
 import { useState } from "react";
+import { useLocale } from "@/providers/LocaleProvider";
 
 const links = [
   { href: "/", label: "Home" },
@@ -20,7 +21,7 @@ const links = [
 export function PublicHeader() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
-
+  const { locale, setLocale } = useLocale();
   return (
     <header className="sticky top-0 z-40 border-b border-forest-900/10 bg-white/95 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
@@ -55,6 +56,31 @@ export function PublicHeader() {
               </Link>
             );
           })}
+          <div className="ml-4 flex overflow-hidden rounded-full border border-forest-900/10">
+          <button
+            type="button"
+            onClick={() => setLocale("en")}
+            className={`px-3 py-2 text-sm ${
+              locale === "en"
+                ? "bg-forest-700 text-white"
+                : "bg-white text-forest-900"
+            }`}
+          >
+            EN
+          </button>
+
+          <button
+            type="button"
+            onClick={() => setLocale("bn")}
+            className={`px-3 py-2 text-sm ${
+              locale === "bn"
+                ? "bg-forest-700 text-white"
+                : "bg-white text-forest-900"
+            }`}
+          >
+            বাংলা
+          </button>
+        </div>
         </nav>
       </div>
 

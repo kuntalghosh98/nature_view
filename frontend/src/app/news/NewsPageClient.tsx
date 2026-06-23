@@ -4,8 +4,11 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { apiRequest } from "@/lib/api";
 import type { NewsItem, NewsListResponse } from "@/types/news";
+import { getLocalizedText } from "@/lib/getLocalizedText";
+import { useLocale } from "@/providers/LocaleProvider";
 
 export default function NewsPageClient() {
+  const { locale } = useLocale();
   const [featured, setFeatured] = useState<NewsItem[]>([]);
   const [items, setItems] = useState<NewsItem[]>([]);
 
@@ -47,12 +50,12 @@ export default function NewsPageClient() {
             >
               <h2 className="text-xl font-semibold">
                 <Link href={`/news/${item.slug}`}>
-                  {item.title?.en || item.slug}
+                  {getLocalizedText(item.title, locale) || item.slug}
                 </Link>
               </h2>
 
               <p className="mt-2 text-sm text-forest-900/65">
-                {item.summary?.en}
+                {getLocalizedText(item.summary, locale)}
               </p>
             </article>
           ))}
@@ -67,12 +70,12 @@ export default function NewsPageClient() {
           >
             <h2 className="text-xl font-semibold">
               <Link href={`/news/${item.slug}`}>
-                {item.title?.en || item.slug}
+                {getLocalizedText(item.title, locale) || item.slug}
               </Link>
             </h2>
 
             <p className="mt-2 text-sm text-forest-900/65">
-              {item.summary?.en}
+              {getLocalizedText(item.summary, locale)}
             </p>
           </article>
         ))}

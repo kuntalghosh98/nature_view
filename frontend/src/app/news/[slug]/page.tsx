@@ -4,11 +4,14 @@ import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import { apiRequest } from "@/lib/api";
 import type { NewsItem } from "@/types/news";
+import { getLocalizedText } from "@/lib/getLocalizedText";
+import { useLocale } from "@/providers/LocaleProvider";
 
 export default function NewsDetailPage() {
   const { slug } = useParams();
   const [item, setItem] = useState<NewsItem | null>(null);
   const [loading, setLoading] = useState(true);
+  const { locale } = useLocale();
 
   useEffect(() => {
     if (!slug) return;
@@ -30,12 +33,12 @@ export default function NewsDetailPage() {
 
   return (
     <article className="space-y-6">
-      <h1 className="text-3xl font-semibold">{item.title?.en}</h1>
-      <p className="text-sm text-forest-900/65">{item.summary?.en}</p>
+      <h1 className="text-3xl font-semibold">{getLocalizedText(item.title, locale)}</h1>
+      <p className="text-sm text-forest-900/65">{getLocalizedText(item.summary, locale)}</p>
       {item.featuredImage && typeof item.featuredImage !== "string" ? (
-        <img src={item.featuredImage.url} alt={item.title?.en || "Featured"} className="w-full rounded-3xl object-cover" />
+        <img src={item.featuredImage.url} alt={getLocalizedText(item.title, locale) || "Featured"} className="w-full rounded-3xl object-cover" />
       ) : null}
-      <div className="prose max-w-none" dangerouslySetInnerHTML={{ __html: item.body?.en || "" }} />
+      <div className="prose max-w-none" dangerouslySetInnerHTML={{ __html: getLocalizedText(item.body, locale) }} />
     </article>
   );
 }

@@ -2,6 +2,7 @@
 
 import { StoreProvider } from "@/store/StoreProvider";
 import { PublicShell } from "@/components/PublicShell";
+import { LocaleProvider } from "@/providers/LocaleProvider";
 
 export default function Providers({
   children,
@@ -10,7 +11,9 @@ export default function Providers({
 }) {
   return (
     <StoreProvider>
-      <PublicShell>{children}</PublicShell>
+      <LocaleProvider>
+        <PublicShell>{children}</PublicShell>
+      </LocaleProvider>
     </StoreProvider>
   );
 }

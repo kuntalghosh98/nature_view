@@ -4,8 +4,11 @@ import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import { apiRequest } from "@/lib/api";
 import type { Project } from "@/types/project";
+import { getLocalizedText } from "@/lib/getLocalizedText";
+import { useLocale } from "@/providers/LocaleProvider";
 
 export default function ProjectDetailPage() {
+    const { locale } = useLocale();
   const { slug } = useParams();
   const [item, setItem] = useState<Project | null>(null);
 
@@ -24,9 +27,17 @@ export default function ProjectDetailPage() {
 
   return (
     <article className="space-y-4">
-      <h1 className="text-3xl font-semibold">{item.title?.en}</h1>
-      <div className="text-sm text-forest-900/65">{item.summary?.en}</div>
-      <div className="prose mt-4" dangerouslySetInnerHTML={{ __html: item.body?.en || "" }} />
+      <h1 className="text-3xl font-semibold">{getLocalizedText(item.title, locale)}</h1>
+    <div className="text-sm text-forest-900/65">
+      {getLocalizedText(item.summary, locale)}
+    </div>
+
+    <div
+      className="prose mt-4"
+      dangerouslySetInnerHTML={{
+        __html: getLocalizedText(item.body, locale),
+      }}
+    />
     </article>
   );
 }

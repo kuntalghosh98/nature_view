@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { StoreProvider } from "@/store/StoreProvider";
 import { PublicShell } from "@/components/PublicShell";
+import Providers from "./providers";
 
 export const metadata: Metadata = {
   title: "Nature View",
@@ -30,9 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <StoreProvider>
-          <PublicShell>{children}</PublicShell>
-        </StoreProvider>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

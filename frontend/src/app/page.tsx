@@ -8,8 +8,11 @@ import type { Project } from "@/types/project";
 import type { Attraction } from "@/types/attraction";
 import type { NewsItem } from "@/types/news";
 import type { EventItem } from "@/types/event";
+import { getLocalizedText } from "@/lib/getLocalizedText";
+import { useLocale } from "@/providers/LocaleProvider";
 
 export default function HomePage() {
+  const { locale } = useLocale();
   const [projects, setProjects] = useState<Project[]>([]);
   const [attractions, setAttractions] = useState<Attraction[]>([]);
   const [news, setNews] = useState<NewsItem[]>([]);
@@ -74,8 +77,8 @@ export default function HomePage() {
           <div className="mt-6 space-y-4">
             {projects.slice(0, 3).map((project) => (
               <Link key={project.slug} href={`/projects/${project.slug}`} className="block rounded-3xl border border-forest-900/5 p-4 transition hover:border-forest-700/20 hover:bg-forest-50">
-                <h3 className="font-semibold text-forest-900">{project.title?.en || project.slug}</h3>
-                <p className="mt-2 text-sm text-forest-900/65">{project.summary?.en}</p>
+                <h3 className="font-semibold text-forest-900">{getLocalizedText(project.title, locale) || project.slug}</h3>
+                <p className="mt-2 text-sm text-forest-900/65">{getLocalizedText(project.summary, locale)}</p>
               </Link>
             ))}
             {projects.length === 0 ? <p className="text-sm text-forest-900/70">No projects available yet.</p> : null}
@@ -90,8 +93,8 @@ export default function HomePage() {
           <div className="mt-6 space-y-4">
             {attractions.slice(0, 3).map((item) => (
               <Link key={item.slug} href={`/attractions/${item.slug}`} className="block rounded-3xl border border-forest-900/5 p-4 transition hover:border-forest-700/20 hover:bg-forest-50">
-                <h3 className="font-semibold text-forest-900">{item.title?.en || item.slug}</h3>
-                <p className="mt-2 text-sm text-forest-900/65">{item.summary?.en}</p>
+                <h3 className="font-semibold text-forest-900">{getLocalizedText(item.title, locale) || item.slug}</h3>
+                <p className="mt-2 text-sm text-forest-900/65">{getLocalizedText(item.summary, locale)}</p>
               </Link>
             ))}
             {attractions.length === 0 ? <p className="text-sm text-forest-900/70">No attractions available yet.</p> : null}
@@ -113,13 +116,13 @@ export default function HomePage() {
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {news.slice(0, 2).map((item) => (
             <Link key={item._id} href={`/news/${item.slug}`} className="rounded-3xl border border-forest-900/10 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
-              <h3 className="text-lg font-semibold text-forest-900">{item.title?.en || item.slug}</h3>
-              <p className="mt-3 text-sm text-forest-900/65">{item.summary?.en}</p>
+              <h3 className="text-lg font-semibold text-forest-900">{getLocalizedText(item.title, locale) || item.slug}</h3>
+              <p className="mt-3 text-sm text-forest-900/65">{getLocalizedText(item.summary, locale)}</p>
             </Link>
           ))}
           {events.slice(0, 2).map((item) => (
             <Link key={item._id} href={`/events/${item.slug}`} className="rounded-3xl border border-forest-900/10 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
-              <h3 className="text-lg font-semibold text-forest-900">{item.title?.en || item.slug}</h3>
+              <h3 className="text-lg font-semibold text-forest-900">{getLocalizedText(item.title, locale) || item.slug}</h3>
               <p className="mt-3 text-sm text-forest-900/65">{item.location}</p>
             </Link>
           ))}

@@ -4,8 +4,11 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { apiRequest } from "@/lib/api";
 import type { EventItem, EventListResponse } from "@/types/event";
+import {getLocalizedText} from "@/lib/getLocalizedText";
+import { useLocale } from "@/providers/LocaleProvider";
 
 export default function EventsPageClient() {
+  const { locale } = useLocale();
   const [featured, setFeatured] = useState<EventItem[]>([]);
   const [items, setItems] = useState<EventItem[]>([]);
 
@@ -47,12 +50,12 @@ export default function EventsPageClient() {
             >
               <h2 className="text-xl font-semibold">
                 <Link href={`/events/${item.slug}`}>
-                  {item.title?.en || item.slug}
+                  {getLocalizedText(item.title, locale) || item.slug}
                 </Link>
               </h2>
 
               <p className="mt-2 text-sm text-forest-900/65">
-                {item.summary?.en}
+                {getLocalizedText(item.summary, locale)}
               </p>
 
               <p className="mt-3 text-sm text-forest-900/70">
@@ -71,12 +74,12 @@ export default function EventsPageClient() {
           >
             <h2 className="text-xl font-semibold">
               <Link href={`/events/${item.slug}`}>
-                {item.title?.en || item.slug}
+                {getLocalizedText(item.title, locale) || item.slug}
               </Link>
             </h2>
 
             <p className="mt-2 text-sm text-forest-900/65">
-              {item.summary?.en}
+              {getLocalizedText(item.summary, locale)}
             </p>
 
             <p className="mt-3 text-sm text-forest-900/70">

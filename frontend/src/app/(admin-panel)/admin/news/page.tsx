@@ -5,11 +5,14 @@ import { apiRequest } from "@/lib/api";
 import type { NewsItem } from "@/types/news";
 import { useAppSelector } from "@/store/hooks";
 import { NewsForm } from "@/components/admin/NewsForm";
+import { getLocalizedText } from "@/lib/getLocalizedText";
+import { useLocale } from "@/providers/LocaleProvider";
 
 export default function AdminNewsPage() {
   const { token } = useAppSelector((state) => state.auth);
   const [items, setItems] = useState<NewsItem[]>([]);
   const [loading, setLoading] = useState(true);
+  const { locale } = useLocale();
   const [editing, setEditing] = useState<NewsItem | null>(null);
 
   async function load() {
@@ -65,8 +68,8 @@ export default function AdminNewsPage() {
               <div key={item._id} className="rounded-lg border bg-white p-4 shadow-sm">
                 <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                   <div>
-                    <div className="font-medium">{item.title?.en || item.slug}</div>
-                    <div className="text-xs text-forest-900/60">{item.summary?.en}</div>
+                    <div className="font-medium">{getLocalizedText(item.title, locale) || item.slug}</div>
+                    <div className="text-xs text-forest-900/60">{getLocalizedText(item.summary, locale) }</div>
                     <div className="mt-2 text-xs text-forest-900/70">{item.isFeatured ? "Featured" : "Standard"} • {item.isPublished ? "Published" : "Draft"}</div>
                   </div>
                   <div className="flex flex-wrap gap-2">

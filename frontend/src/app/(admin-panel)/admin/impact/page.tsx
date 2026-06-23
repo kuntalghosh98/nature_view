@@ -5,11 +5,14 @@ import { apiRequest } from "@/lib/api";
 import type { ImpactMetric } from "@/types/impact";
 import { useAppSelector } from "@/store/hooks";
 import { ImpactMetricForm } from "@/components/admin/ImpactMetricForm";
+import { getLocalizedText } from "@/lib/getLocalizedText";
+import { useLocale } from "@/providers/LocaleProvider";
 
 export default function AdminImpactPage() {
   const { token } = useAppSelector((state) => state.auth);
   const [items, setItems] = useState<ImpactMetric[]>([]);
   const [loading, setLoading] = useState(true);
+  const { locale } = useLocale();
   const [editing, setEditing] = useState<ImpactMetric | null>(null);
 
   async function load() {
@@ -66,8 +69,8 @@ export default function AdminImpactPage() {
                 <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                   <div>
                     <div className="font-medium">{item.value}</div>
-                    <div className="text-xs text-forest-900/60">{item.title?.en}</div>
-                    <div className="mt-2 text-xs text-forest-900/70">{item.isHighlighted ? "Highlighted" : "Standard"}</div>
+                    <div className="text-xs text-forest-900/60">{getLocalizedText(item.title, locale)}</div>
+                    <div className="mt-2 text-xs text-forest-900/70">{getLocalizedText(item.description, locale)}</div>
                   </div>
                   <div className="flex flex-wrap gap-2">
                     <button onClick={() => setEditing(item)} className="rounded-lg border px-3 py-1 text-sm">Edit</button>

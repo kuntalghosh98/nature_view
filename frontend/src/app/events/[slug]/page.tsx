@@ -5,11 +5,14 @@ import { useParams } from "next/navigation";
 import Link from "next/link";
 import { apiRequest } from "@/lib/api";
 import type { EventItem } from "@/types/event";
+import { getLocalizedText } from "@/lib/getLocalizedText";
+import { useLocale } from "@/providers/LocaleProvider";
 
 export default function EventDetailPage() {
   const { slug } = useParams();
   const [item, setItem] = useState<EventItem | null>(null);
   const [loading, setLoading] = useState(true);
+  const { locale } = useLocale();
 
   useEffect(() => {
     if (!slug) return;
@@ -33,7 +36,7 @@ export default function EventDetailPage() {
     <article className="space-y-6">
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <h1 className="text-3xl font-semibold">{item.title?.en}</h1>
+          <h1 className="text-3xl font-semibold">{getLocalizedText(item.title, locale)}</h1>
           <p className="text-sm text-forest-900/65">{item.location}</p>
         </div>
         {item.registrationUrl ? (
@@ -59,7 +62,7 @@ export default function EventDetailPage() {
       </div>
 
       {item.featuredImage && typeof item.featuredImage !== "string" ? (
-        <img src={item.featuredImage.url} alt={item.title?.en || "Featured"} className="w-full rounded-3xl object-cover" />
+        <img src={item.featuredImage.url} alt={getLocalizedText(item.title, locale) || "Featured"} className="w-full rounded-3xl object-cover" />
       ) : null}
 
       <div className="prose max-w-none" dangerouslySetInnerHTML={{ __html: item.body?.en || "" }} />

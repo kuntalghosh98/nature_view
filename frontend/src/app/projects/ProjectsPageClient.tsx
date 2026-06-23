@@ -5,8 +5,11 @@ import Link from "next/link";
 
 import { apiRequest } from "@/lib/api";
 import type { Project } from "@/types/project";
+import { useLocale } from "@/providers/LocaleProvider";
+import { getLocalizedText } from "@/lib/getLocalizedText";
 
 export default function ProjectsPageClient() {
+    const { locale } = useLocale();
   const [items, setItems] = useState<Project[]>([]);
 
   useEffect(() => {
@@ -38,12 +41,12 @@ export default function ProjectsPageClient() {
           >
             <h2 className="text-xl font-semibold">
               <Link href={`/projects/${p.slug}`}>
-                {p.title?.en || p.slug}
+                {getLocalizedText(p.title, locale) || p.slug}
               </Link>
             </h2>
 
             <p className="text-sm text-forest-900/65">
-              {p.summary?.en}
+              {getLocalizedText(p.summary, locale)}
             </p>
           </article>
         ))}
