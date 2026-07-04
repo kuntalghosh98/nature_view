@@ -32,6 +32,7 @@ export function AttractionForm({
   const [featuredImageUrl, setFeaturedImageUrl] = useState<string | null>(
     typeof attraction?.featuredImage === "object" && attraction?.featuredImage ? attraction.featuredImage.url : null
   );
+  const [status, setStatus] = useState(attraction?.status || "demo");
   const [error, setError] = useState("");
   const [saving, setSaving] = useState(false);
 
@@ -45,6 +46,7 @@ export function AttractionForm({
     setSlug(attraction?.slug || "");
     setIsFeatured(Boolean(attraction?.isFeatured));
     setIsPublished(Boolean(attraction?.isPublished));
+    setStatus(attraction?.status || "demo");
     setFeaturedImageId(typeof attraction?.featuredImage === "string" ? attraction.featuredImage : attraction?.featuredImage?._id || null);
     setFeaturedImageUrl(typeof attraction?.featuredImage === "object" && attraction?.featuredImage ? attraction.featuredImage.url : null);
     setError("");
@@ -66,6 +68,7 @@ export function AttractionForm({
         summary: { en: summaryEn, bn: summaryBn },
         body: { en: bodyEn, bn: bodyBn },
         slug: slug || slugPreview,
+        status,
         isFeatured,
         isPublished,
         featuredImage: featuredImageId
@@ -120,7 +123,7 @@ export function AttractionForm({
         />
       </div>
 
-      <div className="grid gap-3 lg:grid-cols-2">
+      <div className="grid gap-3 lg:grid-cols-3 items-end">
         <div>
           <input
             placeholder="Slug"
@@ -132,7 +135,21 @@ export function AttractionForm({
             Preview: <span className="font-medium">{slugPreview}</span>
           </p>
         </div>
-        <div className="grid gap-2">
+
+        <div>
+          <select
+            className="rounded-lg border px-3 py-2 w-full bg-white"
+            value={status}
+            onChange={(e) => setStatus(e.target.value as any)}
+          >
+            <option value="demo">Demo</option>
+            <option value="upcoming">Upcoming</option>
+            <option value="on-going">On-going</option>
+            <option value="completed">Completed</option>
+          </select>
+        </div>
+
+        <div className="grid gap-2 pb-2">
           <label className="flex items-center gap-2 text-sm">
             <input type="checkbox" checked={isFeatured} onChange={(e) => setIsFeatured(e.target.checked)} />
             Featured attraction

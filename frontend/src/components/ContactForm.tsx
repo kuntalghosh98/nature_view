@@ -3,8 +3,10 @@
 import { FormEvent, useState } from "react";
 import { apiRequest } from "@/lib/api";
 import type { ContactSubmission } from "@/types/contact";
+import { useLocale } from "@/providers/LocaleProvider";
 
 export function ContactForm() {
+  const { t } = useLocale();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -31,7 +33,7 @@ export function ContactForm() {
       setPhone("");
       setMessage("");
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Submission failed");
+      setError(err instanceof Error ? err.message : t('contactForm.error'));
     } finally {
       setSaving(false);
     }
@@ -40,15 +42,15 @@ export function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className="grid gap-4 rounded-3xl border border-forest-900/10 bg-white p-6 shadow-sm">
       <div className="space-y-2">
-        <h2 className="text-2xl font-semibold">Contact us</h2>
-        <p className="text-sm text-forest-900/65">Send a message and we’ll get back to you soon.</p>
+        <h2 className="text-2xl font-semibold">{t('contactForm.title')}</h2>
+        <p className="text-sm text-forest-900/65">{t('contactForm.subtitle')}</p>
       </div>
 
-      {success ? <p className="rounded-lg border border-emerald-200 bg-emerald-50 p-3 text-sm text-emerald-800">Your message has been submitted.</p> : null}
+      {success ? <p className="rounded-lg border border-emerald-200 bg-emerald-50 p-3 text-sm text-emerald-800">{t('contactForm.success')}</p> : null}
       {error ? <p className="rounded-lg border border-rose-200 bg-rose-50 p-3 text-sm text-rose-800">{error}</p> : null}
 
       <input
-        placeholder="Name"
+        placeholder={t('contactForm.fields.name')}
         className="rounded-lg border px-3 py-2"
         value={name}
         onChange={(e) => setName(e.target.value)}
@@ -56,20 +58,20 @@ export function ContactForm() {
       />
       <input
         type="email"
-        placeholder="Email"
+        placeholder={t('contactForm.fields.email')}
         className="rounded-lg border px-3 py-2"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         required
       />
       <input
-        placeholder="Phone"
+        placeholder={t('contactForm.fields.phone')}
         className="rounded-lg border px-3 py-2"
         value={phone}
         onChange={(e) => setPhone(e.target.value)}
       />
       <textarea
-        placeholder="Message"
+        placeholder={t('contactForm.fields.message')}
         className="min-h-[140px] rounded-lg border px-3 py-2"
         value={message}
         onChange={(e) => setMessage(e.target.value)}
@@ -77,7 +79,7 @@ export function ContactForm() {
       />
 
       <button type="submit" className="rounded-lg bg-forest-700 px-4 py-3 text-sm font-semibold text-white" disabled={saving}>
-        {saving ? "Sending..." : "Send message"}
+        {saving ? t('contactForm.submitting') : t('contactForm.submit')}
       </button>
     </form>
   );

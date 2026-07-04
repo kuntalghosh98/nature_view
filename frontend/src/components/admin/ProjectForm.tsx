@@ -31,6 +31,7 @@ export function ProjectForm({
     typeof project?.featuredImage === "object" && project?.featuredImage ? project.featuredImage.url : null
   );
   const [isPublished, setIsPublished] = useState(Boolean(project?.isPublished));
+  const [status, setStatus] = useState(project?.status || "demo");
   const [error, setError] = useState("");
   const [saving, setSaving] = useState(false);
 
@@ -45,6 +46,7 @@ export function ProjectForm({
     setFeaturedImageId(typeof project?.featuredImage === "string" ? project.featuredImage : project?.featuredImage?._id || null);
     setFeaturedImageUrl(typeof project?.featuredImage === "object" && project?.featuredImage ? project.featuredImage.url : null);
     setIsPublished(Boolean(project?.isPublished));
+    setStatus(project?.status || "demo");
     setError("");
   }, [project]);
 
@@ -63,6 +65,7 @@ export function ProjectForm({
         summary: { en: summaryEn, bn: summaryBn },
         body: { en: bodyEn, bn: bodyBn },
         slug: slug || slugPreview,
+        status,
         isPublished,
         featuredImage: featuredImageId
       };
@@ -128,7 +131,21 @@ export function ProjectForm({
             Preview: <span className="font-medium">{slugPreview}</span>
           </p>
         </div>
-        <label className="flex items-center gap-2 text-sm">
+        
+        <div>
+          <select
+            className="rounded-lg border px-3 py-2 w-full bg-white"
+            value={status}
+            onChange={(e) => setStatus(e.target.value as any)}
+          >
+            <option value="demo">Demo</option>
+            <option value="upcoming">Upcoming</option>
+            <option value="on-going">On-going</option>
+            <option value="completed">Completed</option>
+          </select>
+        </div>
+
+        <label className="flex items-center gap-2 text-sm pb-2">
           <input
             type="checkbox"
             checked={isPublished}

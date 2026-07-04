@@ -11,6 +11,7 @@ export type EventItem = {
   endDate?: string | null;
   registrationUrl?: string;
   featuredImage?: string | { _id: string; url: string } | null;
+  status?: "demo" | "upcoming" | "on-going" | "completed";
   isFeatured?: boolean;
   isPublished?: boolean;
   publishedAt?: string | null;

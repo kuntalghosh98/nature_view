@@ -30,11 +30,16 @@ export function EventForm({
   const [registrationUrl, setRegistrationUrl] = useState(event?.registrationUrl || "");
   const [isFeatured, setIsFeatured] = useState(Boolean(event?.isFeatured));
   const [isPublished, setIsPublished] = useState(Boolean(event?.isPublished));
+  const [status, setStatus] = useState(event?.status || "demo");
   const [featuredImageId, setFeaturedImageId] = useState<string | null>(
-    typeof event?.featuredImage === "string" ? event.featuredImage : event?.featuredImage?._id || null
+    typeof event?.featuredImage === "string"
+      ? event.featuredImage
+      : event?.featuredImage?._id || null
   );
   const [featuredImageUrl, setFeaturedImageUrl] = useState<string | null>(
-    typeof event?.featuredImage === "object" && event?.featuredImage ? event.featuredImage.url : null
+    typeof event?.featuredImage === "object" && event?.featuredImage
+      ? event.featuredImage.url
+      : null
   );
   const [error, setError] = useState("");
   const [saving, setSaving] = useState(false);
@@ -132,7 +137,7 @@ export function EventForm({
         />
       </div>
 
-      <div className="grid gap-3 lg:grid-cols-2">
+      <div className="grid gap-3 lg:grid-cols-3">
         <div>
           <input
             placeholder="Slug"
@@ -143,6 +148,18 @@ export function EventForm({
           <p className="mt-1 text-xs text-forest-900/60">
             Preview: <span className="font-medium">{slugPreview}</span>
           </p>
+        </div>
+        <div>
+          <select
+            className="rounded-lg border px-3 py-2 w-full bg-white"
+            value={status}
+            onChange={(e) => setStatus(e.target.value as any)}
+          >
+            <option value="demo">Demo</option>
+            <option value="upcoming">Upcoming</option>
+            <option value="on-going">On-going</option>
+            <option value="completed">Completed</option>
+          </select>
         </div>
         <div className="grid gap-2">
           <label className="flex items-center gap-2 text-sm">

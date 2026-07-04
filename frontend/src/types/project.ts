@@ -14,6 +14,7 @@ export type Project = {
   body?: Localized;
   gallery?: Array<string | ProjectMedia>;
   featuredImage?: string | ProjectMedia | null;
+  status?: "demo" | "upcoming" | "on-going" | "completed";
   isPublished?: boolean;
   publishedAt?: string | null;
   createdAt?: string;

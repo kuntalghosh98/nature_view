@@ -14,6 +14,7 @@ export type Attraction = {
   body?: Localized;
   gallery?: Array<string | AttractionMedia>;
   featuredImage?: string | AttractionMedia | null;
+  status?: "demo" | "upcoming" | "on-going" | "completed";
   isFeatured?: boolean;
   isPublished?: boolean;
   publishedAt?: string | null;
