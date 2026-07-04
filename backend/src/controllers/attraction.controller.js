@@ -88,7 +88,8 @@ async function publicList(req, res, next) {
 
     if ((!items || items.length === 0) && (!featured || featured.length === 0)) {
       const fallback = loadFallback();
-      return res.json({ success: true, data: fallback });
+      const featuredFallback = fallback.filter(x => x.isFeatured);
+      return res.json({ success: true, data: { featured: featuredFallback, items: fallback } });
     }
 
     res.json({ success: true, data: { featured, items } });

@@ -1,11 +1,80 @@
 [
   {
-    "title": { "en": "Sample Plantation Project", "bn": "নমুনা প্ল্যান্টেশন প্রকল্প" },
-    "slug": "sample-plantation-project",
-    "summary": { "en": "A community plantation initiative.", "bn": "একটি সম্প্রদায় প্ল্যান্টেশন উদ্যোগ।" },
-    "body": { "en": "Detailed project content goes here.", "bn": "প্রকল্পের বিস্তারিত বিষয়বস্তু এখানে যাবে।" },
+    "_id": "project-fallback-1",
+    "title": { "en": "Community Reforestation Initiative", "bn": "সম্প্রদায় পুনঃবনায়ন উদ্যোগ" },
+    "slug": "community-reforestation-initiative",
+    "summary": { "en": "Restoring 25 hectares of degraded forestland with native evergreen trees.", "bn": "নেটিভ চিরহরিৎ গাছ দিয়ে ২৫ হেক্টর ক্ষয়প্রাপ্ত বনাঞ্চল পুনরুদ্ধার করা হচ্ছে।" },
+    "body": { "en": "<p>This community-led initiative aims to plant over 15,000 native tree saplings. By engaging local schools, volunteers, and forest department officials, we are restoring natural biodiversity, preventing soil erosion along river valleys, and providing sustainable livelihood opportunities for forest-dwelling communities.</p><p>We provide training, tools, and stipends for community plant caregivers who monitor tree growth and health over three years.</p>", "bn": "<p>এই সম্প্রদায়ের নেতৃত্বে পরিচালিত উদ্যোগের লক্ষ্য হলো ১৫,০০০-এর বেশি স্থানীয় গাছের চারা রোপণ করা। স্থানীয় স্কুল, স্বেচ্ছাসেবক এবং বন বিভাগের কর্মকর্তাদের সম্পৃক্ত করে, আমরা প্রাকৃতিক জীববৈচিত্র্য পুনরুদ্ধার করছি, নদীর উপত্যকা বরাবর মাটি ক্ষয় রোধ করছি এবং বনজীবী সম্প্রদায়ের জন্য টেকসই জীবিকার সুযোগ প্রদান করছি।</p><p>আমরা সম্প্রদায়ের উদ্ভিদ যত্নশীলদের প্রশিক্ষণ, সরঞ্জাম এবং উপবৃত্তি প্রদান করি যারা তিন বছর ধরে গাছের বৃদ্ধি এবং স্বাস্থ্য পর্যবেক্ষণ করে।</p>" },
+    "status": "completed",
+    "isPublished": true,
+    "publishedAt": "2026-01-10T00:00:00.000Z",
+    "featuredImage": {
+      "_id": "media-proj-1",
+      "url": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1200&q=80"
+    },
+    "gallery": [
+      {
+        "_id": "media-proj-1-g1",
+        "url": "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "_id": "media-proj-1-g2",
+        "url": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=1200&q=80"
+      }
+    ],
+    "meta": {}
+  },
+  {
+    "_id": "project-fallback-2",
+    "title": { "en": "Solar-Powered River Water Irrigation", "bn": "সৌরচালিত নদীর পানি সেচ প্রকল্প" },
+    "slug": "solar-river-water-irrigation",
+    "summary": { "en": "Providing clean energy-driven water access for rural community organic farms.", "bn": "গ্রামীণ সম্প্রদায়ের জৈব খামারগুলোর জন্য পরিচ্ছন্ন জ্বালানি চালিত পানি সরবরাহ।" },
+    "body": { "en": "<p>We are installing five large-scale solar irrigation grids along the bank of the Shitalakshya River. These grids pump water to elevated reservoirs, which then distribute it to over 120 smallholder vegetable farms via gravity-fed drip hoses. This project eliminates fossil fuel dependence and cuts farming costs by 60%.</p>", "bn": "<p>আমরা শীতলক্ষ্যা নদীর তীরবর্তী অঞ্চলে পাঁচটি বড় আকারের সৌর সেচ গ্রিড স্থাপন করছি। এই গ্রিডগুলি পানি পাম্প করে উঁচু জলাশয়ে নিয়ে যায়, যা পরে মাধ্যাকর্ষণ-চালিত ড্রিপ হোসের মাধ্যমে ১২০টিরও বেশি ক্ষুদ্র উদ্ভিজ্জ খামারে বিতরণ করে। এই প্রকল্পটি জীবাশ্ম জ্বালানির ওপর নির্ভরতা দূর করে এবং চাষের খরচ ৬০% কমায়।</p>" },
+    "status": "on-going",
+    "isPublished": true,
+    "publishedAt": "2026-03-15T00:00:00.000Z",
+    "featuredImage": {
+      "_id": "media-proj-2",
+      "url": "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1200&q=80"
+    },
+    "gallery": [
+      {
+        "_id": "media-proj-2-g1",
+        "url": "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1200&q=80"
+      }
+    ],
+    "meta": {}
+  },
+  {
+    "_id": "project-fallback-3",
+    "title": { "en": "Medicinal Garden & Seed Herbarium", "bn": "ঔষধি বাগান ও বীজ সংরক্ষণাগার" },
+    "slug": "medicinal-garden-seed-herbarium",
+    "summary": { "en": "Establishing a nursery to conserve rare indigenous medicinal herbs and shrubs.", "bn": "বিরল দেশীয় ঔষধি ভেষজ ও গুল্ম সংরক্ষণের জন্য একটি নার্সারি স্থাপন।" },
+    "body": { "en": "<p>A heritage-focused conservation effort to safeguard over 80 species of local medicinal plants. The sanctuary will include an educational walking path, descriptive plaques in English and Bengali, and a seed bank facility to share wild seeds with local farmers and researchers.</p>", "bn": "<p>৮০টিরও বেশি স্থানীয় ঔষধি উদ্ভিদের প্রজাতি সুরক্ষার জন্য ঐতিহ্য-কেন্দ্রিক সংরক্ষণ প্রচেষ্টা। এই অভয়ারণ্যটিতে একটি শিক্ষামূলক হাঁটার পথ, ইংরেজি এবং বাংলায় বর্ণনামূলক ফলক এবং স্থানীয় কৃষক ও গবেষকদের সাথে বুনো বীজ ভাগ করার জন্য একটি বীজ ব্যাংক সুবিধা থাকবে।</p>" },
+    "status": "upcoming",
     "isPublished": true,
     "publishedAt": "2026-06-01T00:00:00.000Z",
+    "featuredImage": {
+      "_id": "media-proj-3",
+      "url": "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1200&q=80"
+    },
+    "gallery": [],
+    "meta": {}
+  },
+  {
+    "_id": "project-fallback-4",
+    "title": { "en": "Eco-Tourism Walking Trail Pilot", "bn": "ইকো-ট্যুরিজম ওয়াকিং ট্রেইল পাইলট" },
+    "slug": "eco-tourism-trail-pilot",
+    "summary": { "en": "Creating a low-impact hiking route along the ridge of the sanctuary.", "bn": "অভয়ারণ্যের শৈলশিরা বরাবর একটি কম প্রভাবের হাইকিং রুট তৈরি করা হচ্ছে।" },
+    "body": { "en": "<p>This pilot project maps a 5km low-impact hiking trail through the protected bamboo groves. The trail will feature hanging rope bridges, bird-watching hides made from recycled timber, and digital guides via QR codes at key ecological markers.</p>", "bn": "<p>এই পাইলট প্রকল্পটি সুরক্ষিত বাঁশঝাড়ের মধ্য দিয়ে একটি ৫ কিলোমিটার কম-প্রভাবের হাইকিং ট্রেইল মানচিত্র তৈরি করে। ট্রেইলটিতে ঝুলন্ত দড়ির সেতু, পুনর্ব্যবহৃত কাঠ থেকে তৈরি পাখি দেখার জায়গা এবং মূল পরিবেশগত মার্কারগুলিতে কিউআর কোডের মাধ্যমে ডিজিটাল গাইড থাকবে।</p>" },
+    "status": "demo",
+    "isPublished": true,
+    "publishedAt": "2026-06-20T00:00:00.000Z",
+    "featuredImage": {
+      "_id": "media-proj-4",
+      "url": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=80"
+    },
+    "gallery": [],
     "meta": {}
   }
 ]

@@ -13,6 +13,11 @@ const projectSchema = new mongoose.Schema(
     body: { type: Object, default: {} },
     gallery: [{ type: mongoose.Schema.Types.ObjectId, ref: "Media" }],
     featuredImage: { type: mongoose.Schema.Types.ObjectId, ref: "Media", default: null },
+    status: {
+      type: String,
+      enum: ["demo", "upcoming", "on-going", "completed"],
+      default: "demo"
+    },
     isPublished: { type: Boolean, default: false },
     publishedAt: { type: Date, default: null },
     meta: { type: Object, default: {} },

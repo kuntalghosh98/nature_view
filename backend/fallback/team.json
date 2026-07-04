@@ -2,15 +2,37 @@
   {
     "name": { "en": "Ayesha Rahman", "bn": "আয়েশা রহমান" },
     "role": { "en": "Community Outreach Lead", "bn": "সম্প্রদায় আউটরিচ লিড" },
-    "bio": { "en": "Leads local engagement and volunteer coordination.", "bn": "স্থানীয় সম্পৃক্ততা এবং স্বেচ্ছাসেবক সমন্বয় পরিচালনা করেন।" },
-    "photo": null,
+    "bio": { "en": "Leads local engagement, volunteer coordination, and runs local forest awareness drives.", "bn": "স্থানীয় সম্পৃক্ততা, স্বেচ্ছাসেবক সমন্বয় পরিচালনা করেন এবং স্থানীয় বন সচেতনতা অভিযান চালান।" },
+    "photo": {
+      "url": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80"
+    },
     "isPublished": true
   },
   {
     "name": { "en": "Karim Hossain", "bn": "করিম হোসেন" },
     "role": { "en": "Conservation Advisor", "bn": "সংরক্ষণ উপদেষ্টা" },
-    "bio": { "en": "Advises on ecological restoration and visitor experience.", "bn": "পুষ্টি পুনঃস্থাপন এবং ভিজিটর অভিজ্ঞতা নিয়ে পরামর্শ দেন।" },
-    "photo": null,
+    "bio": { "en": "Advises on ecological restoration, low-impact tourist routes, and species cataloging.", "bn": "পরিবেশগত পুনরুদ্ধার, কম প্রভাবের পর্যটন পথ এবং প্রজাতির ক্যাটালগিং নিয়ে পরামর্শ দেন।" },
+    "photo": {
+      "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80"
+    },
+    "isPublished": true
+  },
+  {
+    "name": { "en": "Dr. Sajid Alam", "bn": "ড. সাজিদ আলম" },
+    "role": { "en": "Lead Ecologist", "bn": "প্রধান পরিবেশবিদ" },
+    "bio": { "en": "Directs the organic nurseries, medicinal seed vaults, and bio-monitoring activities.", "bn": "জৈব নার্সারি, ঔষধি বীজাগার এবং বায়ো-মনিটরিং কার্যক্রম পরিচালনা করেন।" },
+    "photo": {
+      "url": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80"
+    },
+    "isPublished": true
+  },
+  {
+    "name": { "en": "Nusrat Jahan", "bn": "নুসরাত জাহান" },
+    "role": { "en": "Volunteer Coordinator", "bn": "স্বেচ্ছাসেবক সমন্বয়কারী" },
+    "bio": { "en": "Manages volunteer training drives, school education tours, and project documentation.", "bn": "স্বেচ্ছাসেবক প্রশিক্ষণ অভিযান, স্কুল শিক্ষামূলক সফর এবং প্রকল্প ডকুমেন্টেশন পরিচালনা করেন।" },
+    "photo": {
+      "url": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80"
+    },
     "isPublished": true
   }
 ]

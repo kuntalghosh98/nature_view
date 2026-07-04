@@ -1,12 +1,68 @@
 [
   {
-    "title": { "en": "Forest Lookout Point", "bn": "বনের দৃষ্টিপথ" },
-    "slug": "forest-lookout-point",
-    "summary": { "en": "A scenic viewpoint with a walking trail.", "bn": "একটি সুন্দর দৃশ্যমান পথ যেখানে হাঁটার ট্রেইল রয়েছে।" },
-    "body": { "en": "Visitors can enjoy panoramic views of the forest canopy and river valley.", "bn": "পর্যটকরা বনাঞ্চল এবং নদী উপত্যকার প্রশস্ত দৃশ্য উপভোগ করতে পারেন।" },
+    "_id": "attraction-fallback-1",
+    "title": { "en": "Misty Peak Observatory", "bn": "কুয়াশাচ্ছন্ন চূড়া পর্যবেক্ষণ কেন্দ্র" },
+    "slug": "misty-peak-observatory",
+    "summary": { "en": "A beautiful scenic viewpoint looking over the entire reserve forest canopy.", "bn": "একটি সুন্দর প্রাকৃতিক দৃশ্যপট যা পুরো সংরক্ষিত বনের উপরিভাগ পর্যবেক্ষণ করে।" },
+    "body": { "en": "<p>Located at the highest ridge in the district, Misty Peak Observatory offers visitors a breathtaking panoramic view of the dense evergreen forest canopy and winding Shitalakshya River below.</p><p>The observatory features a low-footprint elevated wooden deck, professional binoculars, and informative display panels depicting local bird species. Early mornings offer spectacular views of the mist rolling through the hills.</p>", "bn": "<p>জেলার সর্বোচ্চ শৈলশিরায় অবস্থিত, কুয়াশাচ্ছন্ন চূড়া পর্যবেক্ষণ কেন্দ্র পর্যটকদের ঘন চিরহরিৎ বনাঞ্চলের উপরিভাগ এবং নিচে আঁকাবাঁকা শীতলক্ষ্যা নদীর এক অপূর্ব প্যানোরামিক দৃশ্য উপহার দেয়।</p><p>পর্যবেক্ষণ কেন্দ্রটিতে একটি কম-উচ্চতার উঁচু কাঠের ডেক, পেশাদার বাইনোকুলার এবং স্থানীয় পাখির প্রজাতি চিত্রিত তথ্যপূর্ণ ডিসপ্লে প্যানেল রয়েছে। খুব সকালের দিকে পাহাড়ের মধ্য দিয়ে কুয়াশা ভেসে যাওয়ার মনোরম দৃশ্য দেখা যায়।</p>" },
+    "status": "completed",
     "isFeatured": true,
     "isPublished": true,
+    "publishedAt": "2026-02-01T00:00:00.000Z",
+    "featuredImage": {
+      "_id": "media-attr-1",
+      "url": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=80"
+    },
+    "gallery": [
+      {
+        "_id": "media-attr-1-g1",
+        "url": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "_id": "media-attr-1-video",
+        "url": "https://assets.mixkit.co/videos/preview/mixkit-view-of-a-misty-forest-from-above-4670-large.mp4",
+        "filename": "misty-forest.mp4"
+      }
+    ],
+    "meta": {}
+  },
+  {
+    "_id": "attraction-fallback-2",
+    "title": { "en": "Butterfly Conservation Sanctuary", "bn": "প্রজাপতি সংরক্ষণ অভয়ারণ্য" },
+    "slug": "butterfly-conservation-sanctuary",
+    "summary": { "en": "A naturally covered dome housing over forty species of native butterflies.", "bn": "চল্লিশটিরও বেশি প্রজাতির দেশীয় প্রজাপতি সমৃদ্ধ একটি প্রাকৃতিক গম্বুজ ঘর।" },
+    "body": { "en": "<p>The Butterfly Sanctuary is an eco-engineered dome filled with flowering plants, nectar feeders, and small water streams. It acts as both a breeding sanctuary and a education park where visitors can learn about the crucial role of insect pollinators in our ecosystem.</p><p>Guided visits are conducted hourly by community volunteers.</p>", "bn": "<p>প্রজাপতি অভয়ারণ্যটি ফুল গাছ, অমৃত ফিডার এবং ছোট জলের স্রোতে ভরা একটি পরিবেশ-বান্ধব গম্বুজ। এটি প্রজনন কেন্দ্র এবং একটি শিক্ষা পার্ক উভয় হিসাবে কাজ করে যেখানে দর্শনার্থীরা আমাদের বাস্তুতন্ত্রে পরাগায়নকারী পতঙ্গের গুরুত্বপূর্ণ ভূমিকা সম্পর্কে জানতে পারে।</p><p>সম্প্রদায়ের স্বেচ্ছাসেবকদের দ্বারা প্রতি ঘণ্টায় নির্দেশিত পরিদর্শনের আয়োজন করা হয়।</p>" },
+    "status": "on-going",
+    "isFeatured": true,
+    "isPublished": true,
+    "publishedAt": "2026-04-10T00:00:00.000Z",
+    "featuredImage": {
+      "_id": "media-attr-2",
+      "url": "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1200&q=80"
+    },
+    "gallery": [
+      {
+        "_id": "media-attr-2-g1",
+        "url": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80"
+      }
+    ],
+    "meta": {}
+  },
+  {
+    "_id": "attraction-fallback-3",
+    "title": { "en": "Bamboo Canopy Bridge", "bn": "বাঁশ ক্যানোপি ব্রিজ" },
+    "slug": "bamboo-canopy-bridge",
+    "summary": { "en": "An eco-friendly suspension walkway connecting tall forest groves.", "bn": "লম্বা বনভূমির সাথে সংযোগকারী পরিবেশ-বান্ধব ঝুলন্ত হাঁটার পথ।" },
+    "body": { "en": "<p>A 150-meter suspension walkway suspended 20 meters above the ground, linking giant bamboo clumps. Built entirely from local bamboo and treated hemp rope, this attraction offers a unique high-level perspective of forest biodiversity.</p>", "bn": "<p>giant বাঁশের ঝাড়কে সংযুক্ত করে মাটি থেকে ২০ মিটার উপরে ঝুলে থাকা একটি ১৫০ মিটারের ঝুলন্ত হাঁটার পথ। সম্পূর্ণ স্থানীয় বাঁশ এবং প্রক্রিয়াজাত পাটের দড়ি দিয়ে নির্মিত, এই আকর্ষণটি বনের জীববৈচিত্র্যের একটি অনন্য উচ্চ-স্তরের দৃষ্টিভঙ্গি প্রদান করে।</p>" },
+    "status": "upcoming",
+    "isFeatured": false,
+    "isPublished": true,
     "publishedAt": "2026-06-01T00:00:00.000Z",
+    "featuredImage": {
+      "_id": "media-attr-3",
+      "url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80"
+    },
+    "gallery": [],
     "meta": {}
   }
 ]

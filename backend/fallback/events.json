@@ -1,32 +1,59 @@
 [
   {
     "_id": "event-fallback-1",
-    "title": { "en": "Forest Awareness Walk", "bn": "বন সচেতনতা মিছিল" },
-    "slug": "forest-awareness-walk",
-    "summary": { "en": "Join a guided walk to learn about local forest ecosystems.", "bn": "স্থানীয় বনগুলি সম্পর্কে জানতে গাইডেড ওয়াকে যোগ দিন।" },
-    "body": { "en": "<p>An educational walk with local guides and conservation experts.</p>", "bn": "<p>স্থানীয় গাইড এবং সংরক্ষণ বিশেষজ্ঞদের সাথে একটি শিক্ষামূলক ওয়াক।</p>" },
-    "location": "Riverside Nature Park",
-    "startDate": "2025-12-05T09:00:00.000Z",
-    "endDate": "2025-12-05T12:00:00.000Z",
-    "registrationUrl": "https://example.com/register/forest-walk",
-    "featuredImage": null,
+    "title": { "en": "Monsoon Tree Planting Drive", "bn": "বর্ষা গাছ রোপণ অভিযান" },
+    "slug": "monsoon-tree-planting-drive",
+    "summary": { "en": "Join hands with local communities to plant native tree species during the rains.", "bn": "বর্ষাকালে দেশীয় গাছ লাগাতে স্থানীয় সম্প্রদায়ের সাথে হাত মেলান।" },
+    "body": { "en": "<p>Our annual flagship planting drive brings together volunteers, schools, and local leaders. We will be planting native fruit-bearing and shade trees like Mango, Jackfruit, and Arjun to replenish the buffer zone of the conservation reserve.</p><p>We provide gloves, saplings, shovels, and a complimentary traditional organic lunch cooked by the local cooperative.</p>", "bn": "<p>আমাদের বার্ষিক ফ্ল্যাগশিপ রোপণ অভিযান স্বেচ্ছাসেবক, স্কুল এবং স্থানীয় নেতাদের একত্রিত করে। আমরা সংরক্ষণ রিজার্ভের বাফার জোন পুনরায় পূরণ করতে আম, কাঁঠাল এবং অর্জুনের মতো দেশীয় ফলদ ও ছায়াদানকারী গাছ রোপণ করব।</p><p>আমরা গ্লাভস, চারাগাছ, বেলচা এবং স্থানীয় সমবায়ের দ্বারা রান্না করা একটি প্রশংসামূলক ঐতিহ্যবাহী জৈব মধ্যাহ্নভোজ সরবরাহ করব।</p>" },
+    "location": "Riverside Reforestation Zone A",
+    "startDate": "2026-06-15T09:00:00.000Z",
+    "endDate": "2026-06-15T16:00:00.000Z",
+    "registrationUrl": "https://example.com/register/monsoon-planting",
+    "status": "completed",
     "isFeatured": true,
     "isPublished": true,
-    "publishedAt": "2025-11-20T09:00:00.000Z"
+    "publishedAt": "2026-05-10T09:00:00.000Z",
+    "featuredImage": {
+      "_id": "media-evt-1",
+      "url": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1200&q=80"
+    }
   },
   {
     "_id": "event-fallback-2",
-    "title": { "en": "Community Plantation Drive", "bn": "সম্প্রদায় রোপণ অভিযান" },
-    "slug": "community-plantation-drive",
-    "summary": { "en": "Help plant native trees and support local biodiversity.", "bn": "স্থানীয় গাছ রোপণ করতে এবং স্থানীয় জীববৈচিত্র্যকে সমর্থন করতে সহায়তা করুন।" },
-    "body": { "en": "<p>Volunteers will receive tools and training for tree planting.</p>", "bn": "<p>স্বেচ্ছাসেবকরা গাছ রোপণের জন্য সরঞ্জাম এবং প্রশিক্ষণ পাবে।</p>" },
-    "location": "Green Valley Field",
-    "startDate": "2025-12-20T10:00:00.000Z",
-    "endDate": "2025-12-20T14:00:00.000Z",
-    "registrationUrl": "https://example.com/register/plantation-drive",
-    "featuredImage": null,
+    "title": { "en": "Ecological Restoration & Seed Workshop", "bn": "পরিবেশগত পুনরুদ্ধার ও বীজ কর্মশালা" },
+    "slug": "ecological-restoration-seed-workshop",
+    "summary": { "en": "Learn seed collection, organic composting, and nursery bed preparation.", "bn": "বীজ সংগ্রহ, জৈব সার তৈরি এবং নার্সারি বেড প্রস্তুত করার পদ্ধতি জানুন।" },
+    "body": { "en": "<p>Led by senior botanist Dr. Sajid Alam, this hands-on workshop teaches participants how to identify indigenous seeds, set up compost beds, and maintain high-yield organic nurseries. Perfect for home gardeners and eco-tourism operators.</p>", "bn": "<p>প্রবীণ উদ্ভিদবিদ ড. সাজিদ আলমের নেতৃত্বে পরিচালিত এই ব্যবহারিক কর্মশালা অংশগ্রহণকারীদের দেশীয় বীজ সনাক্ত করতে, কম্পোস্ট বেড স্থাপন করতে এবং উচ্চ ফলনশীল জৈব নার্সারি রক্ষণাবেক্ষণ করতে শেখায়। বাড়ির বাগান মালিক এবং ইকো-ট্যুরিজম অপারেটরদের জন্য উপযুক্ত।</p>" },
+    "location": "Community Center Greenhouse",
+    "startDate": "2026-07-10T10:00:00.000Z",
+    "endDate": "2026-07-10T14:00:00.000Z",
+    "registrationUrl": "https://example.com/register/seed-workshop",
+    "status": "on-going",
     "isFeatured": false,
     "isPublished": true,
-    "publishedAt": "2025-11-30T10:00:00.000Z"
+    "publishedAt": "2026-06-01T10:00:00.000Z",
+    "featuredImage": {
+      "_id": "media-evt-2",
+      "url": "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1200&q=80"
+    }
+  },
+  {
+    "_id": "event-fallback-3",
+    "title": { "en": "Annual Nature Photography Contest Exhibition", "bn": "বার্ষিক প্রকৃতি আলোকচিত্র প্রতিযোগিতা প্রদর্শনী" },
+    "slug": "annual-nature-photography-contest",
+    "summary": { "en": "Showcasing stunning landscapes and biodiversity captured by local photographers.", "bn": "স্থানীয় আলোকচিত্রীদের ক্যামেরায় বন্দি করা অত্যাশ্চর্য ল্যান্ডস্কেপ এবং জীববৈচিত্র্য প্রদর্শন।" },
+    "body": { "en": "<p>Join us for the grand opening ceremony of the nature photography exhibition. The top 30 photographs highlighting local flora and fauna will be displayed, and winning photographers will be awarded cash prizes by government environmental representatives.</p>", "bn": "<p>প্রকৃতি আলোকচিত্র প্রদর্শনীর গ্র্যান্ড উদ্বোধনী অনুষ্ঠানে আমাদের সাথে যোগ দিন। স্থানীয় উদ্ভিদ এবং প্রাণিকুল তুলে ধরা সেরা ৩০টি আলোকচিত্র প্রদর্শিত হবে এবং বিজয়ী আলোকচিত্রীদের সরকারি পরিবেশ প্রতিনিধিদের দ্বারা নগদ পুরস্কার দেওয়া হবে।</p>" },
+    "location": "Misty Peak Visitor Pavilion",
+    "startDate": "2026-08-20T11:00:00.000Z",
+    "endDate": "2026-08-25T18:00:00.000Z",
+    "registrationUrl": "https://example.com/register/photo-exhibition",
+    "status": "upcoming",
+    "isFeatured": true,
+    "isPublished": true,
+    "publishedAt": "2026-06-15T09:00:00.000Z",
+    "featuredImage": {
+      "_id": "media-evt-3",
+      "url": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80"
+    }
   }
 ]

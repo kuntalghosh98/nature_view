@@ -1,14 +1,26 @@
 [
   {
-    "title": { "en": "Trees planted", "bn": "রোপিত গাছ" },
-    "value": "12,500+",
-    "description": { "en": "Native trees planted across the reserve.", "bn": "সংরক্ষিত অঞ্চলে নেটিভ গাছ রোপণ।" },
+    "title": { "en": "Trees Planted", "bn": "রোপিত গাছ" },
+    "value": "15,000+",
+    "description": { "en": "Native saplings successfully planted and monitored by community caregivers.", "bn": "সম্প্রদায়ের যত্নশীলদের দ্বারা সফলভাবে রোপণ এবং পর্যবেক্ষণ করা দেশীয় চারা।" },
     "isHighlighted": true
   },
   {
-    "title": { "en": "Volunteers trained", "bn": "প্রশিক্ষণপ্রাপ্ত স্বেচ্ছাসেবক" },
-    "value": "850+",
-    "description": { "en": "Community members trained in conservation practices.", "bn": "সংরক্ষণ অনুশীলনে সম্প্রদায় সদস্যদের প্রশিক্ষণ।" },
+    "title": { "en": "Volunteers Trained", "bn": "প্রশিক্ষণপ্রাপ্ত স্বেচ্ছাসেবক" },
+    "value": "1,200+",
+    "description": { "en": "Local youth and community members certified in eco-tourism and nursery care.", "bn": "ইকো-ট্যুরিজম এবং নার্সারি যত্নে প্রত্যয়িত স্থানীয় যুব ও সম্প্রদায়ের সদস্য।" },
+    "isHighlighted": true
+  },
+  {
+    "title": { "en": "Area Restored", "bn": "পুনরুদ্ধারকৃত এলাকা" },
+    "value": "45 Hectares",
+    "description": { "en": "Degraded forest lands brought back to lush natural evergreen habitats.", "bn": "ক্ষয়প্রাপ্ত বনভূমি পুনরায় সবুজ প্রাকৃতিক চিরহরিৎ আবাসে পরিণত করা হয়েছে।" },
+    "isHighlighted": false
+  },
+  {
+    "title": { "en": "Species Protected", "bn": "সুরক্ষিত প্রজাতি" },
+    "value": "120+",
+    "description": { "en": "Birds, butterflies, and indigenous plant species carefully cataloged and guarded.", "bn": "পাখি, প্রজাপতি এবং দেশীয় উদ্ভিদের প্রজাতি যত্নসহকারে ক্যাটালগ এবং পাহারা দেওয়া হয়েছে।" },
     "isHighlighted": false
   }
 ]

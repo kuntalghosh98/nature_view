@@ -11,6 +11,11 @@ const eventSchema = new mongoose.Schema(
     endDate: { type: Date, default: null },
     registrationUrl: { type: String, default: "" },
     featuredImage: { type: mongoose.Schema.Types.ObjectId, ref: "Media", default: null },
+    status: {
+      type: String,
+      enum: ["demo", "upcoming", "on-going", "completed"],
+      default: "demo"
+    },
     isFeatured: { type: Boolean, default: false },
     isPublished: { type: Boolean, default: false },
     publishedAt: { type: Date, default: null },
