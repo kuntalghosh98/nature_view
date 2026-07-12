@@ -15,3 +15,10 @@ pnpm-debug.log*
 
 .DS_Store
 Thumbs.db
+
+.continue/
+.agents/
+skills-lock.json
+redesign_plan.txt
+PROJECT_CONTEXT.txt
+.vscode/

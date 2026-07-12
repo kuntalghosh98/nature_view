@@ -296,6 +296,7 @@ Backend files:
 - backend/src/routes/admin.routes.js
 - backend/src/routes/audit.routes.js
 - backend/scripts/seed-super-admin.js
+
  ../backend/fallback/
         ../backend/src/controllers/attraction.controller.js
         ../backend/src/controllers/contact.controller.js
