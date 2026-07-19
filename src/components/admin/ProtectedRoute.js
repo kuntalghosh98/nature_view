@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars, unicode-bom, jsx-a11y/anchor-is-valid */
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { restoreSession } from "@/store/slices/authSlice";

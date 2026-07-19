@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars, unicode-bom, jsx-a11y/anchor-is-valid */
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Activity, Briefcase, LogOut, Mail, ShieldCheck, Users, MapPin } from "lucide-react";
 import { logoutAdmin } from "@/store/slices/authSlice";

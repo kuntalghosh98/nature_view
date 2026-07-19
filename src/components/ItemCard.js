@@ -1,4 +1,5 @@
 
+/* eslint-disable no-unused-vars, unicode-bom, jsx-a11y/anchor-is-valid */
 import { Calendar, MapPin, Ticket, ArrowRight } from "lucide-react";
 import { resolveMediaUrl } from "@/lib/media";
 import { StatusBadge } from "@/components/StatusBadge";

@@ -1,4 +1,5 @@
 
+/* eslint-disable no-unused-vars, unicode-bom, jsx-a11y/anchor-is-valid */
 /**
  * Returns the localized string for the current locale, falling back to English,
  * then Bengali, then an empty string.

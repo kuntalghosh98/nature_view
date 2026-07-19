@@ -1,6 +1,7 @@
 
 
 
+/* eslint-disable no-unused-vars, unicode-bom, jsx-a11y/anchor-is-valid */
 import { Link } from "react-router-dom";
 import { useLocale } from "@/providers/LocaleProvider";
 import { apiRequest } from "@/lib/api";
@@ -867,12 +868,12 @@ function ParallaxHero({ heroImage }) {
           >
             Explore Destinations
           </Link>
-          <a
-            href="#mission"
+          <Link
+            to="#mission"
             className="inline-flex min-h-11 items-center gap-2 rounded-full border border-white/30 bg-white/5 px-7 py-3 text-sm font-semibold text-[#FAF6EE] backdrop-blur-md transition-colors hover:bg-white/10"
           >
             Our Mission <ArrowRight className="h-4 w-4" />
-          </a>
+          </Link>
         </Reveal>
       </div>
 

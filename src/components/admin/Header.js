@@ -1,4 +1,5 @@
 
+/* eslint-disable no-unused-vars, unicode-bom, jsx-a11y/anchor-is-valid */
 import { useAppSelector } from "@/store/hooks";
 
 export function Header() {

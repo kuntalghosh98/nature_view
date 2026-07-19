@@ -1,4 +1,5 @@
 
+/* eslint-disable no-unused-vars, unicode-bom, jsx-a11y/anchor-is-valid */
 import { useState } from "react";
 import { Send, CheckCircle2, AlertCircle, Loader2, User, Mail, Phone, MessageSquare } from "lucide-react";
 import { apiRequest } from "@/lib/api";

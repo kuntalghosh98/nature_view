@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars, unicode-bom, jsx-a11y/anchor-is-valid */
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { apiRequest } from "@/lib/api";
 

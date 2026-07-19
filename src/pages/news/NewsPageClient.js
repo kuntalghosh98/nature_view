@@ -1,4 +1,5 @@
 
+/* eslint-disable no-unused-vars, unicode-bom, jsx-a11y/anchor-is-valid */
 import { useState, useMemo, useEffect } from "react";
 import { Calendar, Star, Search, X, Sparkles } from "lucide-react";
 

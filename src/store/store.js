@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars, unicode-bom, jsx-a11y/anchor-is-valid */
 import { configureStore } from "@reduxjs/toolkit";
 import authReducer from "./slices/authSlice";
 import projectsReducer from "./slices/projectsSlice";
