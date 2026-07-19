@@ -48,4 +48,3 @@ const projectsSlice = createSlice({
 
 export const { setProjects } = projectsSlice.actions;
 export default projectsSlice.reducer;
-

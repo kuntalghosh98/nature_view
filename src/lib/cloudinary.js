@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Cloudinary configuration constants
  * Used for direct unsigned uploads to Cloudinary
  */

@@ -1,4 +1,4 @@
-﻿import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import PublicShell from "@/components/PublicShell";
 import HomePage from "@/app/page";
 import ProjectsPage from "@/pages/projects/page";
@@ -26,7 +26,7 @@ export default function App() {
     <Routes>
       <Route path="/" element={<PublicShell><HomePage /></PublicShell>} />
       <Route path="/projects" element={<PublicShell><ProjectsPage /></PublicShell>} />
-      {/* Project detail route – use a dynamic slug parameter */}
+      {/* Project detail route ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“ use a dynamic slug parameter */}
       <Route path="/projects/:slug" element={<PublicShell><ProjectDetailPage /></PublicShell>} />
       <Route path="/attractions" element={<PublicShell><AttractionsPage /></PublicShell>} />
       {/* Attraction detail route with slug */}
@@ -60,4 +60,3 @@ export default function App() {
     </Routes>
   );
 }
-

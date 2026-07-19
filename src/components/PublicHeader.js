@@ -89,7 +89,7 @@ import { Menu, X, Leaf } from "lucide-react";
  *   - On every other route (no full-bleed hero to protect), it's solid
  *     from the first frame so nav text stays legible over normal content.
  *
- * NOTE: the Google Fonts import lives in HomePage.jsx — if this header can
+ * NOTE: the Google Fonts import lives in HomePage.jsx ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â if this header can
  * mount without the homepage (e.g. on a deep link), move that @import into
  * your global stylesheet / index.html so fonts are guaranteed to load.
  * -----------------------------------------------------------------------

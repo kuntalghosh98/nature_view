@@ -4,7 +4,7 @@ import { apiRequest } from "@/lib/api";
 import { useAppSelector } from "@/store/hooks";
 import { MediaPicker } from "@/components/admin/MediaPicker";
 
-/** Simple team member form – all TypeScript syntax removed. */
+/** Simple team member form ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“ all TypeScript syntax removed. */
 export function TeamMemberForm({ member, onSaved, onCancel }) {
   const { token } = useAppSelector((state) => state.auth);
 
@@ -152,5 +152,4 @@ export function TeamMemberForm({ member, onSaved, onCancel }) {
         </form>
       );
     }
-
 

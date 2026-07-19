@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { FormEvent, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { apiRequest } from "@/lib/api";
 import { useAppSelector } from "@/store/hooks";
 // Types are omitted for plain JavaScript implementation.
@@ -41,7 +41,7 @@ export default function AdminsPage() {
   // @ts-ignore: user?.role may be undefined in plain JS
   }, [token, user?.role]); // dependencies include user role
 
-  async function handleCreate(event: FormEvent<HTMLFormElement>) {
+  async function handleCreate(event) {
     event.preventDefault();
     if (!token) return;
 

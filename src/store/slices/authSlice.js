@@ -1,4 +1,4 @@
-﻿import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { apiRequest } from "@/lib/api";
 
 const TOKEN_KEY = "nature_view_admin_token";
@@ -87,4 +87,3 @@ const authSlice = createSlice({
 });
 
 export default authSlice.reducer;
-

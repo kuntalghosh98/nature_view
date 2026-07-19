@@ -1,4 +1,4 @@
-﻿
+
 import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import { Link } from "react-router-dom";
@@ -152,7 +152,6 @@ export default function ImpactPage() {
     </div>
   );
 }
-
 
 
 

@@ -75,7 +75,7 @@ export default function AdminAttractionsPage() {
                     // @ts-ignore
                     <div className="font-medium">{getLocalizedText((item as any).title, locale) || (item as any).slug}</div>
                     <div className="text-xs text-forest-900/60">{getLocalizedText((item as any).summary, locale)}</div>
-                    <div className="mt-1 text-xs text-forest-900/70">{(item as any).isFeatured ? "Featured" : "Standard"} • {(item as any).isPublished ? "Published" : "Draft"}</div>
+                    <div className="mt-1 text-xs text-forest-900/70">{(item as any).isFeatured ? "Featured" : "Standard"} ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢ {(item as any).isPublished ? "Published" : "Draft"}</div>
                   </div>
                   <div className="flex flex-wrap gap-2">
                     <button onClick={() => setEditing(item)} className="rounded-lg border px-3 py-1 text-sm">Edit</button>

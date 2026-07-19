@@ -58,4 +58,3 @@ const newsSlice = createSlice({
 
 export const { setNews } = newsSlice.actions;
 export default newsSlice.reducer;
-

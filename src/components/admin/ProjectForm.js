@@ -192,4 +192,3 @@ export function ProjectForm({ project, onSaved, onCancel }) {
     </form>
   );
 }
-

@@ -1,4 +1,4 @@
-﻿import { useEffect } from "react";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { restoreSession } from "@/store/slices/authSlice";
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
@@ -32,4 +32,3 @@ export function ProtectedRoute({ children }) {
 
   return <>{children}</>;
 }
-

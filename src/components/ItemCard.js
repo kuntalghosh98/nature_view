@@ -1,5 +1,4 @@
 
-import { Link } from "react-router-dom";
 import { Calendar, MapPin, Ticket, ArrowRight } from "lucide-react";
 import { resolveMediaUrl } from "@/lib/media";
 import { StatusBadge } from "@/components/StatusBadge";

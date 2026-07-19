@@ -1,5 +1,4 @@
-﻿
-import { ReactNode } from "react";
+
 import PublicHeader from "@/components/PublicHeader";
 import PublicFooter from "@/components/PublicFooter";
 
@@ -14,4 +13,3 @@ export function PublicShell({ children }) {
 }
 
 export default PublicShell;
-

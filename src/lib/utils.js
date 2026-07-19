@@ -1,4 +1,4 @@
-﻿import { clsx } from "clsx";
+import { clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 
 /**
@@ -9,7 +9,7 @@ export function cn(...inputs) {
   return twMerge(clsx(inputs));
 }
 
-/** Convert internal locale identifiers to BCP‑47 language tags. */
+/** Convert internal locale identifiers to BCPÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Ëœ47 language tags. */
 export function appLocaleToBcp47(locale) {
   return locale === "bn" ? "bn-BD" : "en-US";
 }

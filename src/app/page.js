@@ -9,33 +9,32 @@ import { resolveMediaUrl } from "@/lib/media";
 import { ArrowRight, ArrowUpRight, Calendar, MapPin, Leaf, Quote } from "lucide-react";
 import { formatLocalizedDate } from "@/lib/utils";
 import { loadInitialData } from "@/lib/initialLoad";
-import { store } from "@/store/store";
 import { useEffect, useRef, useState } from "react";
 
 /**
- * Nature View — Homepage (bold pass)
+ * Nature View ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â Homepage (bold pass)
  * -----------------------------------------------------------------------
  * Palette
- *   Ink     #0B1610  near-black emerald — primary dark ground
+ *   Ink     #0B1610  near-black emerald ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â primary dark ground
  *   Canopy  #1B2B20  a second, slightly lighter dark green for layering
- *   Moss    #78895A  quiet working accent — eyebrows, secondary links
- *   Lichen  #B7E8A8  a single pale, almost bioluminescent accent — spent
+ *   Moss    #78895A  quiet working accent ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â eyebrows, secondary links
+ *   Lichen  #B7E8A8  a single pale, almost bioluminescent accent ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â spent
  *                    ONLY on the trail rail, waypoints, active states and
  *                    the masked stat numeral. Never used as a fill colour.
- *   Clay    #A85B34  warm ember — reserved for one CTA hover
- *   Sand    #EFE9DC  warm paper — light section backgrounds
+ *   Clay    #A85B34  warm ember ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â reserved for one CTA hover
+ *   Sand    #EFE9DC  warm paper ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â light section backgrounds
  *   Ivory   #FAF6EE  text-on-dark / card surfaces
  *
- *   Display Fraunces · Body Inter · Utility JetBrains Mono
+ *   Display Fraunces Ãƒâ€šÃ‚Â· Body Inter Ãƒâ€šÃ‚Â· Utility JetBrains Mono
  *
  * Signature system (the "one real risk"):
  *   A scroll-drawn trail line runs down the left rail of the entire page
- *   (desktop only) — a thin path that fills with the lichen accent as you
+ *   (desktop only) ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â a thin path that fills with the lichen accent as you
  *   scroll, with waypoint dots that light up as you pass each section.
  *   It's the same visual idea as the wayfinding markers hikers actually
  *   use, made literal as the page's navigation spine.
  *
- * NOTE: PublicHeader is now a separate, shared component — this file no
+ * NOTE: PublicHeader is now a separate, shared component ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â this file no
  * longer renders its own nav. Google Fonts are still injected locally for
  * portability; move the @import into index.html in production.
  * -----------------------------------------------------------------------
@@ -308,7 +307,7 @@ function ScrollTrail({ sectionCount = 6 }) {
   );
 }
 
-// Fixed, curated positions for the expedition map — sized and placed like
+// Fixed, curated positions for the expedition map ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â sized and placed like
 // pins hand-set on a field map rather than cells in a grid. Falls back to a
 // simple horizontal filmstrip below xl, where irregular absolute layout
 // stops making sense on a narrow screen.
@@ -372,12 +371,12 @@ export default function HomePage() {
       <ScrollTrail sectionCount={7} />
 
       {/* ============================================================= */}
-      {/* 1 — HERO — layered parallax canopy, minimal text               */}
+      {/* 1 ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â HERO ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â layered parallax canopy, minimal text               */}
       {/* ============================================================= */}
       <ParallaxHero heroImage={heroImage} />
 
       {/* ============================================================= */}
-      {/* 2 — MANIFESTO                                                   */}
+      {/* 2 ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â MANIFESTO                                                   */}
       {/* ============================================================= */}
       <section className="px-5 py-24 sm:px-8 sm:py-32 xl:pl-24">
         <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 lg:grid-cols-12">
@@ -386,7 +385,7 @@ export default function HomePage() {
           </Reveal>
           <Reveal delay={100} className="lg:col-span-8">
             <p className="font-['Fraunces'] text-[8vw] font-normal leading-[1.05] tracking-tight text-[#0B1610] sm:text-4xl lg:text-5xl">
-              Every trail we open is a place we help protect —
+              Every trail we open is a place we help protect ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â
               <span className="text-[#5E6E4C]"> tourism that pays its way back into the ground it stands on.</span>
             </p>
           </Reveal>
@@ -396,7 +395,7 @@ export default function HomePage() {
       <TrailDivider />
 
       {/* ============================================================= */}
-      {/* 3 — EXPEDITION MAP — destinations pinned, not gridded          */}
+      {/* 3 ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â EXPEDITION MAP ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â destinations pinned, not gridded          */}
       {/* ============================================================= */}
       {featuredAttractions.length > 0 && (
         <section className="px-5 py-20 sm:px-8 sm:py-28 xl:pl-24">
@@ -495,7 +494,7 @@ export default function HomePage() {
       )}
 
       {/* ============================================================= */}
-      {/* 4 — MISSION + LIVE IMPACT — image-masked numeral, live ticker  */}
+      {/* 4 ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â MISSION + LIVE IMPACT ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â image-masked numeral, live ticker  */}
       {/* ============================================================= */}
       <section id="mission" className="bg-[#0B1610] px-5 py-24 sm:px-8 sm:py-32 xl:pl-24">
         <div className="mx-auto max-w-7xl">
@@ -561,7 +560,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Live impact ticker — swap sample figures for real metrics from the API */}
+          {/* Live impact ticker ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â swap sample figures for real metrics from the API */}
           <Reveal delay={100} className="mt-10 flex flex-wrap items-center gap-x-10 gap-y-4 border-t border-white/10 pt-8">
             {[
               { to: 1240, label: "Trees planted", suffix: "" },
@@ -580,7 +579,7 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================= */}
-      {/* 5 — THE GROUND WE STAND ON — the one orchestrated zoom moment */}
+      {/* 5 ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â THE GROUND WE STAND ON ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â the one orchestrated zoom moment */}
       {/* ============================================================= */}
       <section className="relative h-[70vh] min-h-[420px] w-full">
         <ZoomReveal className="absolute inset-0">
@@ -595,7 +594,7 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================= */}
-      {/* 6 — FIELD LOG                                                   */}
+      {/* 6 ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â FIELD LOG                                                   */}
       {/* ============================================================= */}
       {galleryProjects.length > 0 && (
         <section className="pb-20 pt-16 sm:pb-28 sm:pt-20 xl:pl-24">
@@ -633,13 +632,13 @@ export default function HomePage() {
       )}
 
       {/* ============================================================= */}
-      {/* 7 — QUOTE                                                       */}
+      {/* 7 ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â QUOTE                                                       */}
       {/* ============================================================= */}
       <section className="px-5 py-24 sm:py-28">
         <Reveal className="mx-auto max-w-2xl space-y-5 text-center">
           <Quote className="mx-auto h-7 w-7 text-[#78895A]" />
           <p className="font-['Fraunces'] text-2xl font-normal leading-snug tracking-tight text-[#0B1610] sm:text-3xl">
-            A rare kind of travel — one that leaves the place better than it found it.
+            A rare kind of travel ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â one that leaves the place better than it found it.
           </p>
           <p className="font-['JetBrains_Mono'] text-[11px] uppercase tracking-[0.2em] text-[#5E6E4C]">
             Outside Magazine, 2025
@@ -648,7 +647,7 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================= */}
-      {/* 8 — EVENTS                                                      */}
+      {/* 8 ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â EVENTS                                                      */}
       {/* ============================================================= */}
       {upComingEvents.length > 0 && (
         <section className="bg-white/60 px-5 py-20 sm:px-8 sm:py-24 xl:pl-24">
@@ -698,7 +697,7 @@ export default function HomePage() {
       )}
 
       {/* ============================================================= */}
-      {/* 9 — DISPATCHES                                                  */}
+      {/* 9 ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â DISPATCHES                                                  */}
       {/* ============================================================= */}
       {headlineNews.length > 0 && (
         <section className="px-5 py-20 sm:px-8 sm:py-28 xl:pl-24">
@@ -758,7 +757,7 @@ export default function HomePage() {
       )}
 
       {/* ============================================================= */}
-      {/* 10 — FINAL CTA                                                  */}
+      {/* 10 ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â FINAL CTA                                                  */}
       {/* ============================================================= */}
       <section className="relative flex w-full items-center justify-center overflow-hidden py-28 sm:py-36">
         <div className="absolute inset-0">
@@ -791,7 +790,7 @@ export default function HomePage() {
 }
 
 // ---------------------------------------------------------------------------
-// Hero — three loosely parallaxing layers: base photo, a darker mid wash,
+// Hero ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â three loosely parallaxing layers: base photo, a darker mid wash,
 // and a soft foreground leaf silhouette that drifts slower than scroll,
 // giving the canopy a sense of depth without shipping a video file.
 // ---------------------------------------------------------------------------
@@ -831,7 +830,7 @@ function ParallaxHero({ heroImage }) {
       />
       <div className="absolute inset-0 bg-gradient-to-t from-[#0B1610] via-[#0B1610]/15 to-[#0B1610]/55" />
 
-      {/* Foreground canopy silhouette — drifts faster, softly out of focus */}
+      {/* Foreground canopy silhouette ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â drifts faster, softly out of focus */}
       <svg
         aria-hidden="true"
         style={{ transform: `translateY(${-fgShift * 0.15}px)` }}
@@ -858,7 +857,7 @@ function ParallaxHero({ heroImage }) {
         </Reveal>
         <Reveal delay={240}>
           <p className="mt-6 max-w-md text-[15px] leading-relaxed text-[#EAE6DA]/85 sm:text-base">
-            Journeys into Earth's last untamed corners — built to protect the ground they cover.
+            Journeys into Earth's last untamed corners ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â built to protect the ground they cover.
           </p>
         </Reveal>
         <Reveal delay={340} className="mt-9 flex flex-wrap gap-3">

@@ -1,4 +1,4 @@
-﻿
+
 import { useState, useMemo, useEffect } from "react";
 import { Calendar, Star, Search, X, Sparkles } from "lucide-react";
 
@@ -208,6 +208,5 @@ export default function NewsPageClient() {
     </div>
   );
 }
-
 
 

@@ -67,4 +67,3 @@ export function MediaGrid({ items, onChanged }: { items: MediaItem[]; onChanged?
     </div>
   );
 }
-

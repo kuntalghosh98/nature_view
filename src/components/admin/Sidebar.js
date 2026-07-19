@@ -1,5 +1,5 @@
-﻿import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Activity, Briefcase, Gauge, LogOut, Mail, ShieldCheck, Users, MapPin } from "lucide-react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Activity, Briefcase, LogOut, Mail, ShieldCheck, Users, MapPin } from "lucide-react";
 import { logoutAdmin } from "@/store/slices/authSlice";
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
 
@@ -105,4 +105,3 @@ export function Sidebar() {
     </>
   );
 }
-

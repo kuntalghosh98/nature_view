@@ -50,4 +50,3 @@ const attractionsSlice = createSlice({
 
 export const { setAttractions } = attractionsSlice.actions;
 export default attractionsSlice.reducer;
-

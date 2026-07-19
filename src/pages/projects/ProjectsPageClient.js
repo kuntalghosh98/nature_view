@@ -26,7 +26,7 @@ const statusMap = {
   completed: "completed",
 };
 
-/** Filter options – plain JavaScript array */
+/** Filter options ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“ plain JavaScript array */
 const filters = [
   {
     key: "all",
@@ -184,6 +184,5 @@ export default function ProjectsPageClient() {
     </div>
   );
 }
-
 
 

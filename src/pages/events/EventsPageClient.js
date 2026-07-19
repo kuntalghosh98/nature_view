@@ -1,5 +1,5 @@
 
-import { useState, useMemo, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { Link } from "react-router-dom";
 import {
   Calendar,
@@ -10,12 +10,10 @@ import {
   ChevronLeft,
   ChevronRight,
   Clock,
-  Ticket,
   Sparkles,
 } from "lucide-react";
 import { getLocalizedText } from "@/lib/getLocalizedText";
 import ItemCard from "@/components/ItemCard";
-import { Status } from "@/components/StatusBadge";
 import { useLocale } from "@/providers/LocaleProvider";
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import { fetchEvents } from "@/store/slices/eventsSlice";
@@ -131,7 +129,7 @@ export default function EventsPageClient() {
     const month = currentMonth.getMonth();
     const firstDay = new Date(year, month, 1).getDay();
     const daysInMonth = new Date(year, month + 1, 0).getDate();
-    const days: (number | null)[] = [];
+    const days = [];
     for (let i = 0; i < firstDay; i++) days.push(null);
     for (let d = 1; d <= daysInMonth; d++) days.push(d);
     return days;
@@ -487,6 +485,5 @@ export default function EventsPageClient() {
     </div>
   );
 }
-
 
 

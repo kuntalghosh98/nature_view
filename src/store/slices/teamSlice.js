@@ -43,4 +43,3 @@ const teamSlice = createSlice({
 });
 
 export default teamSlice.reducer;
-

@@ -1,4 +1,4 @@
-﻿
+
 import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import { Users } from "lucide-react";
@@ -102,7 +102,6 @@ export default function TeamPage() {
     </div>
   );
 }
-
 
 
 

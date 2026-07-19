@@ -1,23 +1,18 @@
-import { useCallback, useMemo, useRef, useState, memo } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { memo, useCallback, useRef, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import {
   Trees,
-  Facebook,
-  Instagram,
-  Youtube,
-  Linkedin,
-  Twitter,
   Send,
   CheckCircle2,
   AlertCircle,
 } from "lucide-react";
 
 const socialLinks = [
-  { key: "facebook", icon: "#", color: "#1877F2" },
-  { key: "twitter", icon: "#", color: "#1DA1F2" },
-  { key: "linkedin", icon: "#", color: "#0A66C2" },
-  { key: "instagram", icon: "#", color: "#E4405F" },
-  { key: "youtube", icon: "#", color: "#FF0000" },
+  { key: "facebook", href: "https://facebook.com", color: "#1877F2" },
+  { key: "twitter", href: "https://twitter.com", color: "#1DA1F2" },
+  { key: "linkedin", href: "https://linkedin.com", color: "#0A66C2" },
+  { key: "instagram", href: "https://instagram.com", color: "#E4405F" },
+  { key: "youtube", href: "https://youtube.com", color: "#FF0000" },
 ];
 
 const exploreLinks = [
@@ -37,7 +32,6 @@ const orgLinks = [
 
 const PublicFooterInner = () => {
   const location = useLocation();
-  const navigate = useNavigate();
   const pathname = location.pathname;
   const isAdmin = pathname.startsWith("/admin");
   const prefetchedRoutesRef = useRef(new Set());
@@ -113,16 +107,16 @@ const PublicFooterInner = () => {
             </p>
             {/* Colorful Social Links directly matching reference image look */}
             <div className="flex items-center gap-3 pt-2">
-              {socialLinks.map(({ key }) => (
+                {socialLinks.map(({ key, href }) => (
                 <a
                   key={key}
-                  href="#"
+                  href={href}
                   aria-label={key}
                   className="text-gray-500 hover:text-gray-700 transition-colors p-1"
                 >
                   {key}
                 </a>
-              ))}
+                ))}
             </div>
           </div>
 
@@ -213,7 +207,7 @@ const PublicFooterInner = () => {
       <div className="bg-[#F8FAFC] border-t border-gray-100">
         <div className="mx-auto max-w-7xl px-6 py-5 flex flex-col sm-row items-center justify-between gap-4 text-xs text-gray-500">
           <div>
-            © {new Date().getFullYear()} Copywrite By Naturo
+            Ãƒâ€šÃ‚Â© {new Date().getFullYear()} Copywrite By Naturo
           </div>
           <div className="flex items-center gap-6">
             <Link href="/terms" className="hover-green-600 transition-colors">

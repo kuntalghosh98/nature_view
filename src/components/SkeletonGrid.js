@@ -35,4 +35,3 @@ export function SkeletonGrid({ count, variant = "standard" }) {
     </div>
   );
 }
-

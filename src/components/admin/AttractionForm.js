@@ -10,7 +10,7 @@ import { MediaPicker } from "@/components/admin/MediaPicker";
 export function AttractionForm({ attraction, onSaved, onCancel }) {
   const { token } = useAppSelector((state) => state.auth);
 
-  // Initialize form fields – fall back to empty strings for a new attraction
+  // Initialize form fields ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“ fall back to empty strings for a new attraction
   const [titleEn, setTitleEn] = useState(attraction?.title?.en || "");
   const [summaryEn, setSummaryEn] = useState(attraction?.summary?.en || "");
   const [bodyEn, setBodyEn] = useState(attraction?.body?.en || "");
@@ -129,7 +129,7 @@ export function AttractionForm({ attraction, onSaved, onCancel }) {
       >
         <option value="demo">Demo</option>
         <option value="upcoming">Upcoming</option>
-        <option value="on-going">On‑going</option>
+        <option value="on-going">OnÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Ëœgoing</option>
         <option value="completed">Completed</option>
       </select>
 

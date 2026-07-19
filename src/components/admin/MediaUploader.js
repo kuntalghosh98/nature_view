@@ -1,5 +1,5 @@
 
-import { FormEvent, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { apiRequest } from "@/lib/api";
 import { useAppSelector } from "@/store/hooks";
 import { CLOUDINARY_CLOUD_NAME, CLOUDINARY_UPLOAD_PRESET } from "@/lib/cloudinary";
@@ -155,4 +155,3 @@ export function MediaUploader({ onUploaded }: { onUploaded?: () => void }) {
     </div>
   );
 }
-

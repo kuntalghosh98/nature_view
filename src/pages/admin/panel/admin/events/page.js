@@ -75,7 +75,7 @@ export default function AdminEventsPage() {
                     {/* @ts-ignore */}
                     <div className="font-medium">{getLocalizedText((item || {}).title, locale) || (item || {}).slug}</div>
                     <div className="text-xs text-forest-900/60">{getLocalizedText((item || {}).summary, locale)}</div>
-                    <div className="mt-2 text-xs text-forest-900/70">{(item || {}).isFeatured ? "Featured" : "Standard"} • {(item || {}).isPublished ? "Published" : "Draft"}</div>
+                    <div className="mt-2 text-xs text-forest-900/70">{(item || {}).isFeatured ? "Featured" : "Standard"} ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢ {(item || {}).isPublished ? "Published" : "Draft"}</div>
                   </div>
                   <div className="flex flex-wrap gap-2">
                     <button onClick={() => setEditing(item)} className="rounded-lg border px-3 py-1 text-sm">Edit</button>

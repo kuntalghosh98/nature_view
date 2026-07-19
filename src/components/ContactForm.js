@@ -1,5 +1,5 @@
-﻿
-import { FormEvent, useState } from "react";
+
+import { useState } from "react";
 import { Send, CheckCircle2, AlertCircle, Loader2, User, Mail, Phone, MessageSquare } from "lucide-react";
 import { apiRequest } from "@/lib/api";
 import { useLocale } from "@/providers/LocaleProvider";
@@ -176,6 +176,5 @@ export function ContactForm() {
     </form>
   );
 }
-
 
 

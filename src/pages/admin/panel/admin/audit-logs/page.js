@@ -6,10 +6,6 @@ import { apiRequest } from "@/lib/api";
 import { useAppSelector } from "@/store/hooks";
 // Types are omitted for plain JavaScript implementation.
 
-type AuditResponse = {
-  success: boolean;
-  data: any[];
-};
 
 export default function AuditLogsPage() {
   // Cast auth slice to known shape for TypeScript safety.

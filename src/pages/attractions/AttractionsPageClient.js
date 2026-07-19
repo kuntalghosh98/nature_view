@@ -1,4 +1,4 @@
-﻿
+
 import { useState, useMemo, useEffect } from "react";
 import { Sparkles, Star, MapPin, Search, X } from "lucide-react";
 
@@ -196,6 +196,5 @@ export default function AttractionsPageClient() {
     </div>
   );
 }
-
 
 

@@ -1,4 +1,4 @@
-﻿import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Leaf } from "lucide-react";
 import { loginAdmin, restoreSession } from "@/store/slices/authSlice";
@@ -108,4 +108,3 @@ export default function AdminLoginPage() {
     </main>
   );
 }
-

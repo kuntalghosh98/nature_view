@@ -1,4 +1,4 @@
-﻿import { configureStore } from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
 import authReducer from "./slices/authSlice";
 import projectsReducer from "./slices/projectsSlice";
 import attractionsReducer from "./slices/attractionsSlice";
@@ -21,4 +21,3 @@ export const store = configureStore({
 
 // Export default for TypeScript compatibility
 export default store;
-

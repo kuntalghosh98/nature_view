@@ -1,4 +1,4 @@
-﻿import "./globals.css";
+import "./globals.css";
 import Providers from "./providers";
 import Bootstrap from "./Bootstrap";
 
@@ -13,4 +13,3 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
-

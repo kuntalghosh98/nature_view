@@ -2,28 +2,28 @@
    * Resolve a media URL from various possible formats.
    *
    * The backend may return:
-   *   • a plain string URL
-   *   • an object with a `secure_url` field (Cloudinary format)
-   *   • an object with a `url` field
-   *   • an object with a `public_id` field – in this case we construct a Cloudinary URL.
-   *   • an object with an `_id` field (ignored for URL resolution)
+   *   ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢ a plain string URL
+   *   ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢ an object with a `secure_url` field (Cloudinary format)
+   *   ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢ an object with a `url` field
+   *   ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢ an object with a `public_id` field ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“ in this case we construct a Cloudinary URL.
+   *   ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢ an object with an `_id` field (ignored for URL resolution)
    *
-   * @param {*} media – The media value (string, object, null/undefined).
-   * @param {string} [fallback] – Optional URL to use when `media` is missing or cannot be resolved.
-   * @returns {string} – Resolved URL, the fallback, or an empty string.
+   * @param {*} media ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“ The media value (string, object, null/undefined).
+   * @param {string} [fallback] ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“ Optional URL to use when `media` is missing or cannot be resolved.
+   * @returns {string} ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“ Resolved URL, the fallback, or an empty string.
    */
   export function resolveMediaUrl(media, fallback) {
-    // No media provided – return fallback or empty string.
+    // No media provided ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“ return fallback or empty string.
     if (!media) return fallback ?? "";
 
-    // Plain string URL – trim whitespace and return, falling back if empty.
+    // Plain string URL ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“ trim whitespace and return, falling back if empty.
     if (typeof media === "string") {
       const trimmed = media.trim();
-      // If the trimmed string is non‑empty return it, otherwise fall back.
+      // If the trimmed string is nonÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Ëœempty return it, otherwise fall back.
       return trimmed || (fallback ?? "");
     }
 
-    // Object representation – check known fields.
+    // Object representation ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“ check known fields.
     if (typeof media === "object") {
       if ("secure_url" in media && media.secure_url) {
         return media.secure_url;
@@ -39,4 +39,3 @@
     // Fallback if none of the above matched.
     return fallback ?? "";
   }
-

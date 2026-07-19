@@ -1,4 +1,4 @@
-﻿
+
 import { Header } from "./Header";
 import { Sidebar } from "./Sidebar";
 import { ProtectedRoute } from "./ProtectedRoute";
@@ -16,4 +16,3 @@ export function AdminLayout({ children }) {
     </ProtectedRoute>
   );
 }
-

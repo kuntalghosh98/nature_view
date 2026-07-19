@@ -136,7 +136,7 @@ export function EventForm({ event, onSaved, onCancel }) {
       >
         <option value="demo">Demo</option>
         <option value="upcoming">Upcoming</option>
-        <option value="on-going">On‑going</option>
+        <option value="on-going">OnÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Ëœgoing</option>
         <option value="completed">Completed</option>
       </select>
 

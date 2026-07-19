@@ -1,4 +1,4 @@
-﻿import { useLocale } from "@/providers/LocaleProvider";
+import { useLocale } from "@/providers/LocaleProvider";
 
 export function StatusBadge({ status, className = "" }) {
   const { t } = useLocale();
@@ -45,4 +45,3 @@ export function StatusBadge({ status, className = "" }) {
     </span>
   );
 }
-

@@ -5,7 +5,7 @@ export const fetchImpact = createAsyncThunk(
   "impact/fetch",
   async (_, { rejectWithValue }) => {
     try {
-      // Simple GET request – the API returns { success, data }.
+      // Simple GET request ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“ the API returns { success, data }.
       const res = await apiRequest("/impact");
       const data = res.data;
       // API may return an array directly or an object with an `items` array.
@@ -53,4 +53,3 @@ const impactSlice = createSlice({
 });
 
 export default impactSlice.reducer;
-

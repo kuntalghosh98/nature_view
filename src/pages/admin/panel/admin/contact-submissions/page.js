@@ -39,14 +39,13 @@ export default function AdminContactSubmissionsPage() {
           <p>Loading...</p>
         ) : (
           <div className="space-y-3">
-            // @ts-ignore: submission._id may be undefined in plain JS
-            // @ts-ignore: submission._id may be undefined in plain JS
+            
             {items.map((submission:any) => (
               // @ts-ignore
               <div key={submission._id} className="rounded-lg border bg-white p-4 shadow-sm">
                 <div className="flex flex-col gap-2">
                   <div className="font-medium">{submission.name}</div>
-                  <p className="text-xs text-forest-900/60">{submission.email} {submission.phone ? `• ${submission.phone}` : ""}</p>
+                  <p className="text-xs text-forest-900/60">{submission.email} {submission.phone ? `ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢ ${submission.phone}` : ""}</p>
                   <p className="mt-2 text-sm text-forest-900/75">{submission.message}</p>
                   <p className="text-xs text-forest-900/60">{submission.createdAt ? new Date(submission.createdAt).toLocaleString() : "Unknown"}</p>
                 </div>
