@@ -61,11 +61,9 @@ export default function AdminTeamPage() {
           <p>Loading...</p>
         ) : (
           <div className="space-y-3">
-            // @ts-ignore: member._id may be undefined in plain JS
-            // @ts-ignore: member._id may be undefined in plain JS
+            {/* member._id may be undefined in plain JS */}
             {items.map((member) => (
-              // @ts-ignore
-              <div key={member._id} className="rounded-lg border bg-white p-4 shadow-sm">
+              <div key={(member || {})._id} className="rounded-lg border bg-white p-4 shadow-sm">
                 <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                   <div>
                     <div className="font-medium">{typeof member.name === "object" ? member.name.en : member.name}</div>
