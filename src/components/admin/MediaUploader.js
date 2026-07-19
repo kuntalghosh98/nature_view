@@ -45,7 +45,7 @@ export function MediaUploader({ onUploaded }: { onUploaded?: () => void }) {
       const fd = new FormData();
       fd.append("file", file);
 
-      const res = await fetch((import.meta.env.VITE_API_BASE_URL || "http://localhost:8080/api") + "/media/upload", {
+      const res = await fetch((import.meta.env.VITE_API_BASE_URL || "https://nature-view-backend.onrender.com/api") + "/media/upload", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`
