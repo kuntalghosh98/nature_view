@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="80" y1="60" x2="430" y2="460" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7E7B8"/>
+      <stop offset="1" stop-color="#DCE9B8"/>
+    </linearGradient>
+
+    <linearGradient id="leaf" x1="110" y1="130" x2="260" y2="380" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#78A943"/>
+      <stop offset="1" stop-color="#2F6B3F"/>
+    </linearGradient>
+
+    <linearGradient id="hill" x1="160" y1="330" x2="380" y2="430" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A6C94A"/>
+      <stop offset="1" stop-color="#4D843A"/>
+    </linearGradient>
+
+    <clipPath id="circleClip">
+      <circle cx="256" cy="256" r="214"/>
+    </clipPath>
+  </defs>
+
+  <!-- Outer emblem -->
+  <circle cx="256" cy="256" r="226" fill="#173F35"/>
+  <circle cx="256" cy="256" r="214" fill="url(#bg)"/>
+
+  <g clip-path="url(#circleClip)">
+    <!-- Sun -->
+    <circle cx="335" cy="165" r="62" fill="#F6A735"/>
+    <!-- Soft sun glow -->
+    <circle cx="335" cy="165" r="88" fill="#F6A735" opacity="0.12"/>
+    <!-- Large leaf -->
+    <path d="M92 318 C72 234 108 135 223 99 C230 188 195 276 92 318Z" fill="url(#leaf)"/>
+    <!-- Leaf vein -->
+    <path d="M103 300 C137 246 174 194 213 143" stroke="#B7D46A" stroke-width="8" stroke-linecap="round" opacity="0.8"/>
+    <!-- Main mountain -->
+    <path d="M105 356 L214 246 L267 195 L320 246 L355 216 L435 356 Z" fill="#173F35"/>
+    <!-- Snow / mountain highlights -->
+    <path d="M267 195 L244 218 L267 209 L287 227 Z" fill="#F7E7B8"/>
+    <path d="M355 216 L337 234 L355 228 L374 247 Z" fill="#F7E7B8"/>
+    <!-- Foreground rolling hill -->
+    <path d="M70 355 C170 395 268 348 449 326 C356 407 215 460 104 413 Z" fill="url(#hill)"/>
+    <!-- Lower dark green landscape -->
+    <path d="M60 417 C180 463 330 430 470 374 L470 540 L60 540 Z" fill="#245C40"/>
+    <!-- Foreground leaf sweep -->
+    <path d="M82 390 C183 431 292 386 437 355 C318 432 191 470 102 430 Z" fill="#A6C94A"/>
+  </g>
+
+  <!-- Outer border -->
+  <circle cx="256" cy="256" r="214" stroke="#173F35" stroke-width="8"/>
+
+  <!-- Small highlight -->
+  <path d="M115 121 C155 84 202 63 256 62" stroke="#8EB25B" stroke-width="7" stroke-linecap="round" opacity="0.7"/>
+</svg>

@@ -38,11 +38,11 @@ function getFromCache(cacheKey) {
         memoryCache.set(cacheKey, parsed);
         return parsed.data;
       }
-      // Expired ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â clean up
+      // Expired — clean up
       sessionStorage.removeItem(cacheKey);
     }
   } catch {
-    // sessionStorage unavailable ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â memory cache still works
+    // sessionStorage unavailable — memory cache still works
   }
   return null;
 }
@@ -56,7 +56,7 @@ function setCache(cacheKey, data) {
   try {
     sessionStorage.setItem(cacheKey, JSON.stringify(entry));
   } catch {
-    // sessionStorage full or unavailable ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â memory cache still works
+    // sessionStorage full or unavailable — memory cache still works
   }
 }
 /**

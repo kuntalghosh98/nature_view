@@ -13,29 +13,29 @@ import { loadInitialData } from "@/lib/initialLoad";
 import { useEffect, useRef, useState } from "react";
 
 /**
- * Nature View ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â Homepage (bold pass)
+ * Nature View — Homepage (bold pass)
  * -----------------------------------------------------------------------
  * Palette
- *   Ink     #0B1610  near-black emerald ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â primary dark ground
+ *   Ink     #0B1610  near-black emerald — primary dark ground
  *   Canopy  #1B2B20  a second, slightly lighter dark green for layering
- *   Moss    #78895A  quiet working accent ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â eyebrows, secondary links
- *   Lichen  #B7E8A8  a single pale, almost bioluminescent accent ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â spent
+ *   Moss    #78895A  quiet working accent — eyebrows, secondary links
+ *   Lichen  #B7E8A8  a single pale, almost bioluminescent accent — spent
  *                    ONLY on the trail rail, waypoints, active states and
  *                    the masked stat numeral. Never used as a fill colour.
- *   Clay    #A85B34  warm ember ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â reserved for one CTA hover
- *   Sand    #EFE9DC  warm paper ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â light section backgrounds
+ *   Clay    #A85B34  warm ember — reserved for one CTA hover
+ *   Sand    #EFE9DC  warm paper — light section backgrounds
  *   Ivory   #FAF6EE  text-on-dark / card surfaces
  *
  *   Display Fraunces Ãƒâ€šÃ‚Â· Body Inter Ãƒâ€šÃ‚Â· Utility JetBrains Mono
  *
  * Signature system (the "one real risk"):
  *   A scroll-drawn trail line runs down the left rail of the entire page
- *   (desktop only) ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â a thin path that fills with the lichen accent as you
+ *   (desktop only) — a thin path that fills with the lichen accent as you
  *   scroll, with waypoint dots that light up as you pass each section.
  *   It's the same visual idea as the wayfinding markers hikers actually
  *   use, made literal as the page's navigation spine.
  *
- * NOTE: PublicHeader is now a separate, shared component ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â this file no
+ * NOTE: PublicHeader is now a separate, shared component — this file no
  * longer renders its own nav. Google Fonts are still injected locally for
  * portability; move the @import into index.html in production.
  * -----------------------------------------------------------------------
@@ -308,7 +308,7 @@ function ScrollTrail({ sectionCount = 6 }) {
   );
 }
 
-// Fixed, curated positions for the expedition map ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â sized and placed like
+// Fixed, curated positions for the expedition map — sized and placed like
 // pins hand-set on a field map rather than cells in a grid. Falls back to a
 // simple horizontal filmstrip below xl, where irregular absolute layout
 // stops making sense on a narrow screen.
@@ -372,12 +372,12 @@ export default function HomePage() {
       <ScrollTrail sectionCount={7} />
 
       {/* ============================================================= */}
-      {/* 1 ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â HERO ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â layered parallax canopy, minimal text               */}
+      {/* 1 — HERO — layered parallax canopy, minimal text               */}
       {/* ============================================================= */}
       <ParallaxHero heroImage={heroImage} />
 
       {/* ============================================================= */}
-      {/* 2 ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â MANIFESTO                                                   */}
+      {/* 2 — MANIFESTO                                                   */}
       {/* ============================================================= */}
       <section className="px-5 py-24 sm:px-8 sm:py-32 xl:pl-24">
         <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 lg:grid-cols-12">
@@ -386,7 +386,7 @@ export default function HomePage() {
           </Reveal>
           <Reveal delay={100} className="lg:col-span-8">
             <p className="font-['Fraunces'] text-[8vw] font-normal leading-[1.05] tracking-tight text-[#0B1610] sm:text-4xl lg:text-5xl">
-              Every trail we open is a place we help protect ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â
+              Every trail we open is a place we help protect —
               <span className="text-[#5E6E4C]"> tourism that pays its way back into the ground it stands on.</span>
             </p>
           </Reveal>
@@ -396,7 +396,7 @@ export default function HomePage() {
       <TrailDivider />
 
       {/* ============================================================= */}
-      {/* 3 ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â EXPEDITION MAP ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â destinations pinned, not gridded          */}
+      {/* 3 — EXPEDITION MAP — destinations pinned, not gridded          */}
       {/* ============================================================= */}
       {featuredAttractions.length > 0 && (
         <section className="px-5 py-20 sm:px-8 sm:py-28 xl:pl-24">
@@ -495,7 +495,7 @@ export default function HomePage() {
       )}
 
       {/* ============================================================= */}
-      {/* 4 ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â MISSION + LIVE IMPACT ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â image-masked numeral, live ticker  */}
+      {/* 4 — MISSION + LIVE IMPACT — image-masked numeral, live ticker  */}
       {/* ============================================================= */}
       <section id="mission" className="bg-[#0B1610] px-5 py-24 sm:px-8 sm:py-32 xl:pl-24">
         <div className="mx-auto max-w-7xl">
@@ -561,7 +561,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Live impact ticker ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â swap sample figures for real metrics from the API */}
+          {/* Live impact ticker — swap sample figures for real metrics from the API */}
           <Reveal delay={100} className="mt-10 flex flex-wrap items-center gap-x-10 gap-y-4 border-t border-white/10 pt-8">
             {[
               { to: 1240, label: "Trees planted", suffix: "" },
@@ -580,7 +580,7 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================= */}
-      {/* 5 ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â THE GROUND WE STAND ON ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â the one orchestrated zoom moment */}
+      {/* 5 — THE GROUND WE STAND ON — the one orchestrated zoom moment */}
       {/* ============================================================= */}
       <section className="relative h-[70vh] min-h-[420px] w-full">
         <ZoomReveal className="absolute inset-0">
@@ -595,7 +595,7 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================= */}
-      {/* 6 ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â FIELD LOG                                                   */}
+      {/* 6 — FIELD LOG                                                   */}
       {/* ============================================================= */}
       {galleryProjects.length > 0 && (
         <section className="pb-20 pt-16 sm:pb-28 sm:pt-20 xl:pl-24">
@@ -858,7 +858,7 @@ function ParallaxHero({ heroImage }) {
         </Reveal>
         <Reveal delay={240}>
           <p className="mt-6 max-w-md text-[15px] leading-relaxed text-[#EAE6DA]/85 sm:text-base">
-            Journeys into Earth's last untamed corners ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â built to protect the ground they cover.
+            Journeys into Earth's last untamed corners — built to protect the ground they cover.
           </p>
         </Reveal>
         <Reveal delay={340} className="mt-9 flex flex-wrap gap-3">

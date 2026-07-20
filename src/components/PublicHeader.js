@@ -70,8 +70,6 @@
 // }
 
 // export default PublicHeader;
-
-
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Menu, X, Leaf } from "lucide-react";
@@ -83,15 +81,19 @@ import { Menu, X, Leaf } from "lucide-react";
  * moss / lichen / sand / ivory, Fraunces + Inter + JetBrains Mono.
  *
  * Behaviour:
- *   - On "/" (the hero route), the header starts fully transparent so the
- *     cinematic hero reads uninterrupted, then crossfades to a solid,
- *     blurred ink bar once the page scrolls past the hero.
- *   - On every other route (no full-bleed hero to protect), it's solid
- *     from the first frame so nav text stays legible over normal content.
+ *   - The header starts fully transparent at the top of any page so the
+ *     content reads uninterrupted, then crossfades to a solid, blurred
+ *     ink bar once the page scrolls down.
+ *   - Whenever the mobile menu is open, the header + panel are ALWAYS
+ *     solid dark, regardless of scroll position.
  *
- * NOTE: the Google Fonts import lives in HomePage.jsx ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â if this header can
- * mount without the homepage (e.g. on a deep link), move that @import into
- * your global stylesheet / index.html so fonts are guaranteed to load.
+ * IMPORTANT: the mobile nav panel is rendered as a SIBLING of <header>,
+ * not a child of it. Header uses backdrop-blur (a CSS backdrop-filter),
+ * and any element with backdrop-filter/filter creates a new containing
+ * block for position:fixed descendants — so a fixed full-screen panel
+ * nested *inside* the header would get clipped to the header's own
+ * (tiny) box instead of covering the viewport. Keeping them as siblings
+ * avoids that trap entirely.
  * -----------------------------------------------------------------------
  */
 
@@ -111,8 +113,9 @@ export function PublicHeader() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  const isHome = location.pathname === "/";
-  const solid = scrolled || !isHome;
+  // Transparent at the very top, solid once scrolled OR whenever the
+  // mobile menu is open (so the header bar matches the dark panel below it).
+  const solid = scrolled || open;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -134,60 +137,63 @@ export function PublicHeader() {
   }, [location.pathname]);
 
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 transition-colors duration-500 ${
-        solid
-          ? "bg-[#0B1610]/92 backdrop-blur-md shadow-[0_1px_0_0_rgba(255,255,255,0.08)]"
-          : "bg-transparent"
-      }`}
-    >
-      <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 sm:h-20 sm:px-8">
-        <Link to="/" className="flex items-center gap-2 text-[#FAF6EE]">
-          <Leaf className="h-4 w-4 text-[#B7E8A8]" />
-          <span className="font-['Fraunces'] text-lg tracking-tight">Nature&nbsp;View</span>
-        </Link>
+    <>
+      <header
+        className={`fixed inset-x-0 top-0 z-50 transition-colors duration-500 ${
+          solid
+            ? "bg-[#0B1610]/95 backdrop-blur-md shadow-[0_1px_0_0_rgba(255,255,255,0.08)]"
+            : "bg-transparent"
+        }`}
+      >
+        <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 sm:h-20 sm:px-8">
+          <Link to="/" className="flex items-center gap-2 text-[#FAF6EE]">
+            <Leaf className="h-4 w-4 text-[#B7E8A8]" />
+            <span className="font-['Fraunces'] text-lg tracking-tight">Nature&nbsp;View</span>
+          </Link>
 
-        {/* Desktop navigation */}
-        <ul className="hidden items-center gap-6 lg:flex xl:gap-8">
-          {links.map((link) => {
-            const active = location.pathname === link.to;
-            return (
-              <li key={link.to}>
-                <Link
-                  to={link.to}
-                  className={`relative font-['JetBrains_Mono'] text-[11px] uppercase tracking-[0.18em] transition-colors ${
-                    active ? "text-[#FAF6EE]" : "text-[#EAE6DA]/70 hover:text-[#FAF6EE]"
-                  }`}
-                >
-                  {link.label}
-                  {active && (
-                    <span className="absolute -bottom-2 left-1/2 h-1 w-1 -translate-x-1/2 rounded-full bg-[#B7E8A8]" />
-                  )}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
+          {/* Desktop navigation */}
+          <ul className="hidden items-center gap-6 lg:flex xl:gap-8">
+            {links.map((link) => {
+              const active = location.pathname === link.to;
+              return (
+                <li key={link.to}>
+                  <Link
+                    to={link.to}
+                    className={`relative font-['JetBrains_Mono'] text-[11px] uppercase tracking-[0.18em] transition-colors ${
+                      active ? "text-[#FAF6EE]" : "text-[#EAE6DA]/70 hover:text-[#FAF6EE]"
+                    }`}
+                  >
+                    {link.label}
+                    {active && (
+                      <span className="absolute -bottom-2 left-1/2 h-1 w-1 -translate-x-1/2 rounded-full bg-[#B7E8A8]" />
+                    )}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
 
-        <Link
-          to="/contact"
-          className="hidden rounded-full bg-[#FAF6EE] px-5 py-2 text-[11px] font-semibold uppercase tracking-[0.15em] text-[#0B1610] transition-colors hover:bg-[#B7E8A8] lg:inline-flex"
-        >
-          Plan a Trip
-        </Link>
+          <Link
+            to="/contact"
+            className="hidden rounded-full bg-[#FAF6EE] px-5 py-2 text-[11px] font-semibold uppercase tracking-[0.15em] text-[#0B1610] transition-colors hover:bg-[#B7E8A8] lg:inline-flex"
+          >
+            Plan a Trip
+          </Link>
 
-        {/* Mobile menu button */}
-        <button
-          className="flex h-10 w-10 items-center justify-center rounded-full text-[#FAF6EE] lg:hidden"
-          onClick={() => setOpen((v) => !v)}
-          aria-label={open ? "Close navigation" : "Open navigation"}
-          aria-expanded={open}
-        >
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
-      </nav>
+          {/* Mobile menu button */}
+          <button
+            className="flex h-10 w-10 items-center justify-center rounded-full text-[#FAF6EE] lg:hidden"
+            onClick={() => setOpen((v) => !v)}
+            aria-label={open ? "Close navigation" : "Open navigation"}
+            aria-expanded={open}
+          >
+            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </nav>
+      </header>
 
-      {/* Mobile navigation panel */}
+      {/* Mobile navigation panel — SIBLING of header, not nested inside it.
+          Always fully opaque dark, covers the entire viewport below the bar. */}
       <div
         className={`fixed inset-0 top-16 z-40 bg-[#0B1610] transition-opacity duration-300 lg:hidden ${
           open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
@@ -219,7 +225,7 @@ export function PublicHeader() {
           Plan a Trip
         </Link>
       </div>
-    </header>
+    </>
   );
 }
 
