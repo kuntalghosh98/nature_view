@@ -99,7 +99,7 @@ const PublicFooterInner = () => {
           
           {/* Brand Info Column */}
           <div className="lg-span-2 space-y-4">
-            <Link href="/" className="inline-flex items-center gap-2 font-bold text-lg text-gray-900 hover-green-700 transition-colors">
+            <Link to="/" className="inline-flex items-center gap-2 font-bold text-lg text-gray-900 hover-green-700 transition-colors">
               <span className="text-emerald-600"><Trees size={22} /></span> 
               Nature View
             </Link>
@@ -128,7 +128,7 @@ const PublicFooterInner = () => {
               {exploreLinks.map(({ href, label }) => (
                 <li key={href}>
                   <Link
-                    href={href}
+                    to={href}
                     onMouseEnter={() => prefetchRoute(href)}
                     className="text-sm text-gray-500 hover-green-600 transition-colors block py-0.5"
                   >
@@ -146,7 +146,7 @@ const PublicFooterInner = () => {
               {orgLinks.map(({ href, label }) => (
                 <li key={href}>
                   <Link
-                    href={href}
+                    to={href}
                     onMouseEnter={() => prefetchRoute(href)}
                     className="text-sm text-gray-500 hover-green-600 transition-colors block py-0.5"
                   >
@@ -211,10 +211,10 @@ const PublicFooterInner = () => {
             Ãƒâ€šÃ‚Â© {new Date().getFullYear()} Copywrite By Naturo
           </div>
           <div className="flex items-center gap-6">
-            <Link href="/terms" className="hover-green-600 transition-colors">
+            <Link to="/terms" className="hover-green-600 transition-colors">
               Terms & Condition
             </Link>
-            <Link href="/privacy" className="hover-green-600 transition-colors">
+            <Link to="/privacy" className="hover-green-600 transition-colors">
               Privacy Policy
             </Link>
           </div>
